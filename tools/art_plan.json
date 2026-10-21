@@ -1,0 +1,939 @@
+[
+  {
+    "id": "ape_closed",
+    "folder": "backgrounds",
+    "description": "Primate enclosure walkway closed by green metal portable barriers, empty path splits behind them, monkeys visible behind glass, late morning, documentary tension, no character foreground.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Primate enclosure walkway closed by green metal portable barriers, empty path splits behind them, monkeys visible behind glass, late morning, documentary tension, no character foreground. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/ape_closed.png"
+  },
+  {
+    "id": "ape_exit",
+    "folder": "backgrounds",
+    "description": "Sunlit exit from a primate enclosure, green temporary barrier half closed by a distant blue-uniform adult employee, monkeys visible far behind glass, a snack cart beyond, relief after tension.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Sunlit exit from a primate enclosure, green temporary barrier half closed by a distant blue-uniform adult employee, monkeys visible far behind glass, a snack cart beyond, relief after tension.",
+    "path": "data/art/backgrounds/ape_exit.png"
+  },
+  {
+    "id": "ape_fork",
+    "folder": "backgrounds",
+    "description": "A zoo primate habitat where the walkway inexplicably splits into two similar paths. Actual monkeys behind glass on the left, a small white rabbit near the right path fence, adults walking toward the right, dense green canopy. Two blank arrow signs.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. A zoo primate habitat where the walkway inexplicably splits into two similar paths. Actual monkeys behind glass on the left, a small white rabbit near the right path fence, adults walking toward the right, dense green canopy. Two blank arrow signs. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+    "path": "data/art/backgrounds/ape_fork.png"
+  },
+  {
+    "id": "aquarium_dawn",
+    "folder": "backgrounds",
+    "description": "Aquarium entrance from inside looking out into pale dawn, blue-lit jellyfish gallery still lit behind viewpoint, ordinary leaves and cool grey morning path beyond open doors, relief, no people.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Aquarium entrance from inside looking out into pale dawn, blue-lit jellyfish gallery still lit behind viewpoint, ordinary leaves and cool grey morning path beyond open doors, relief, no people. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/aquarium_dawn.png"
+  },
+  {
+    "id": "aquarium_lobby",
+    "folder": "backgrounds",
+    "description": "Empty modern aquarium lobby, blue glass, tiled floor, unmanned desk, a black folded work uniform on side table and a large notice board showing abstract horizontal lines, dim cool late afternoon, deep empty corridor, uneasy but readable.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Empty modern aquarium lobby, blue glass, tiled floor, unmanned desk, a black folded work uniform on side table and a large notice board showing abstract horizontal lines, dim cool late afternoon, deep empty corridor, uneasy but readable.",
+    "path": "data/art/backgrounds/aquarium_lobby.png"
+  },
+  {
+    "id": "aquarium_night",
+    "folder": "backgrounds",
+    "description": "Aquarium exterior at midnight, open entrance with bright blue-white internal light, rain-dark paving, exterior deeply shadowed, empty threshold wide enough for two staff, no letters on notice board.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Aquarium exterior at midnight, open entrance with bright blue-white internal light, rain-dark paving, exterior deeply shadowed, empty threshold wide enough for two staff, no letters on notice board. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/aquarium_night.png"
+  },
+  {
+    "id": "aquarium_rain",
+    "folder": "backgrounds",
+    "description": "A strange modern blue-glass aquarium exterior emerging at the end of an ordinary zoo path at rainy late afternoon. Open doors, an unoccupied entry desk, notice board with only illegible horizontal lines, wet paving, low grey clouds, cinematic atmosphere. No staff or visitors in doorway.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. A strange modern blue-glass aquarium exterior emerging at the end of an ordinary zoo path at rainy late afternoon. Open doors, an unoccupied entry desk, notice board with only illegible horizontal lines, wet paving, low grey clouds, cinematic atmosphere. No staff or visitors in doorway.",
+    "path": "data/art/backgrounds/aquarium_rain.png"
+  },
+  {
+    "id": "blue_night",
+    "folder": "backgrounds",
+    "description": "Zoo service path at midnight, sparse lamps, closed animal enclosures and deep spreading shadows, blue-glass building distant through trees, ominous yet physically plausible perspective, no explicit ghost.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Zoo service path at midnight, sparse lamps, closed animal enclosures and deep spreading shadows, blue-glass building distant through trees, ominous yet physically plausible perspective, no explicit ghost. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/blue_night.png"
+  },
+  {
+    "id": "bus_dawn",
+    "folder": "backgrounds",
+    "description": "Same kind of Chinese bus stop at pale dawn, quiet empty benches, first bus approaching far away, tender warm sunrise and wet pavement, calm after an exhausting night.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Same kind of Chinese bus stop at pale dawn, quiet empty benches, first bus approaching far away, tender warm sunrise and wet pavement, calm after an exhausting night. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+    "path": "data/art/backgrounds/bus_dawn.png"
+  },
+  {
+    "id": "bus_day",
+    "folder": "backgrounds",
+    "description": "Sunny Chinese city bus stop outside a zoo, a city bus arriving at right, adults waiting naturally, leafy morning streets, cheerful spring daylight.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Sunny Chinese city bus stop outside a zoo, a city bus arriving at right, adults waiting naturally, leafy morning streets, cheerful spring daylight. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+    "path": "data/art/backgrounds/bus_day.png"
+  },
+  {
+    "id": "controlroom",
+    "folder": "backgrounds",
+    "description": "Broken aquarium monitoring room, dark blank monitors, dust, empty chair and unused control switches, weak blue light from door, intimidating silence, no writing or visible monster.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Broken aquarium monitoring room, dark blank monitors, dust, empty chair and unused control switches, weak blue light from door, intimidating silence, no writing or visible monster. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/controlroom.png"
+  },
+  {
+    "id": "drink_back",
+    "folder": "backgrounds",
+    "description": "Back counter of zoo drink shop, storage cabinet open with one sealed dark red bottle, work gloves, notebook with abstract marks, shelves of normal beverages, institutional daylight.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Back counter of zoo drink shop, storage cabinet open with one sealed dark red bottle, work gloves, notebook with abstract marks, shelves of normal beverages, institutional daylight. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/drink_back.png"
+  },
+  {
+    "id": "drink_shop",
+    "folder": "backgrounds",
+    "description": "Zoo small beverage shop, open counter, neatly arranged water and colorful bottles, a single dark red glass bottle on one shelf, blue-uniform adult clerk in distant background, afternoon warm light. No legible product labels.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Zoo small beverage shop, open counter, neatly arranged water and colorful bottles, a single dark red glass bottle on one shelf, blue-uniform adult clerk in distant background, afternoon warm light. No legible product labels.",
+    "path": "data/art/backgrounds/drink_shop.png"
+  },
+  {
+    "id": "elephant_abnormal",
+    "folder": "backgrounds",
+    "description": "Unsettling close worker viewpoint of a massive chalk-white elephant-shaped creature inside zoo enclosure. Extremely long erect narrow rabbit ears that look completely unlike the fan-shaped ears of an elephant, wrong heavy body proportions and oddly placed thick legs, empty dark eyes, normal grey elephant pictogram on nearby blank sign. Disturbing adult psychological horror anime illustration, no gore, no nudity, no monster named It.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Unsettling close worker viewpoint of a massive chalk-white elephant-shaped creature inside zoo enclosure. Extremely long erect narrow rabbit ears that look completely unlike the fan-shaped ears of an elephant, wrong heavy body proportions and oddly placed thick legs, empty dark eyes, normal grey elephant pictogram on nearby blank sign. Disturbing adult psychological horror anime illustration, no gore, no nudity, no monster named It. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/elephant_abnormal.png"
+  },
+  {
+    "id": "elephant_gate",
+    "folder": "backgrounds",
+    "description": "Visitor view outside a zoo elephant enclosure, waist-high metal barrier, a male security guard in distance controlling entry, adult crowds backing away, one distant adult wearing small rabbit-ear earrings. No clear view of abnormal animal; tense daylight.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Visitor view outside a zoo elephant enclosure, waist-high metal barrier, a male security guard in distance controlling entry, adult crowds backing away, one distant adult wearing small rabbit-ear earrings. No clear view of abnormal animal; tense daylight.",
+    "path": "data/art/backgrounds/elephant_gate.png"
+  },
+  {
+    "id": "food_shelf",
+    "folder": "backgrounds",
+    "description": "Aquarium guest food shelf, sealed bread, bottled water, one container of raw-looking dark meat with a blank label made of horizontal strokes, cool institutional light, detailed object environment closeup, no people.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Aquarium guest food shelf, sealed bread, bottled water, one container of raw-looking dark meat with a blank label made of horizontal strokes, cool institutional light, detailed object environment closeup, no people.",
+    "path": "data/art/backgrounds/food_shelf.png"
+  },
+  {
+    "id": "gate_day",
+    "folder": "backgrounds",
+    "transparent": false,
+    "prompt": "Wide cinematic landscape 16:9 environment artwork for a high-quality contemporary 2D anime romance visual novel. A cheerful Chinese municipal zoo entrance on a sunny late spring morning, believable modern ticket booths, pale concrete entrance arch, green metal gates, leafy trees, tiled footpath, small notice boards showing ONLY illegible horizontal marks. A few individually drawn anime adult visitors in casual clothing, a couple taking a photo and an adult pushing an empty stroller, natural scale, not silhouettes. Warm sunlight, fresh greens, pale blue sky, rich painterly detail, beautiful visual novel background. Eye-level perspective, architecture readable, lower quarter relatively clear for dialogue UI. No text or watermarks, no monsters, no UI, no split panels. Bright and welcoming, consistent anime illustration style.",
+    "path": "data/art/backgrounds/gate_day.png"
+  },
+  {
+    "id": "guest_dark",
+    "folder": "backgrounds",
+    "description": "Same basic guest room with TWO separate narrow beds, desk and jellyfish night lamp switched OFF, door firmly closed, nearly dark but gently readable shapes through cinematic exposure, no actual light sources or glowing jellyfish in room, claustrophobic psychological horror.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Same basic guest room with TWO separate narrow beds, desk and jellyfish night lamp switched OFF, door firmly closed, nearly dark but gently readable shapes through cinematic exposure, no actual light sources or glowing jellyfish in room, claustrophobic psychological horror.",
+    "path": "data/art/backgrounds/guest_dark.png"
+  },
+  {
+    "id": "guest_lit",
+    "folder": "backgrounds",
+    "description": "Small aquarium guest room with TWO narrow separate beds, plain desk, a single small glowing jellyfish night lamp, cream walls, closed door, ordinary luggage stand, no readable text; uncanny quiet warm-blue mixed light.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Small aquarium guest room with TWO narrow separate beds, plain desk, a single small glowing jellyfish night lamp, cream walls, closed door, ordinary luggage stand, no readable text; uncanny quiet warm-blue mixed light.",
+    "path": "data/art/backgrounds/guest_lit.png"
+  },
+  {
+    "id": "hall_night",
+    "folder": "backgrounds",
+    "description": "Long aquarium guest corridor at midnight, closed room doors, weak reflected blue from the consistently bright jellyfish gallery at far end, deep shadows, pushcart near corner, no monsters visible, oppressive perspective.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Long aquarium guest corridor at midnight, closed room doors, weak reflected blue from the consistently bright jellyfish gallery at far end, deep shadows, pushcart near corner, no monsters visible, oppressive perspective.",
+    "path": "data/art/backgrounds/hall_night.png"
+  },
+  {
+    "id": "jelly_day",
+    "folder": "backgrounds",
+    "description": "Stunning aquarium jellyfish gallery in late afternoon, glowing translucent jellyfish in tall blue tanks, balanced bright ambient gallery lighting, public benches, soft reflections, no people in foreground, beautiful but quiet.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Stunning aquarium jellyfish gallery in late afternoon, glowing translucent jellyfish in tall blue tanks, balanced bright ambient gallery lighting, public benches, soft reflections, no people in foreground, beautiful but quiet.",
+    "path": "data/art/backgrounds/jelly_day.png"
+  },
+  {
+    "id": "jelly_night",
+    "folder": "backgrounds",
+    "description": "Aquarium jellyfish gallery at midnight, luminous jellyfish behind vast blue tanks, the public gallery itself remains EVENLY BRIGHT and reliable, all ceiling lights working, dark other corridors visible beyond, fragile oasis in psychological horror.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Aquarium jellyfish gallery at midnight, luminous jellyfish behind vast blue tanks, the public gallery itself remains EVENLY BRIGHT and reliable, all ceiling lights working, dark other corridors visible beyond, fragile oasis in psychological horror.",
+    "path": "data/art/backgrounds/jelly_night.png"
+  },
+  {
+    "id": "lion_four",
+    "folder": "backgrounds",
+    "description": "Four calm white lions, no extra head in background.",
+    "prompt": "Edit this exact image. Keep ONLY the four large calm lions in the central foreground: lying left lion, seated rear-left lioness, central maned lion, lying right lioness. Replace the ENTIRE tall background rock formation on the RIGHT HALF BEHIND those lions with a plain smooth beige concrete zoo wall and a simple small waterfall at the far right. There must be NO animal face or animal silhouette in that entire upper-right area, remove all existing shapes there, especially the little face currently on the high rock. Preserve four central foreground lions, railings and foreground path, same anime style. Exactly four animals in entire image. No text.",
+    "refs": [
+      "backgrounds/lion_four (previous composition)"
+    ],
+    "path": "data/art/backgrounds/lion_four.png"
+  },
+  {
+    "id": "lion_public",
+    "folder": "backgrounds",
+    "description": "Public exit outside a white lion enclosure in afternoon, pale rock habitat behind fencing, adult man seated recovering on steps with his family and distant blue staff, restrained aftermath, not a battle.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Public exit outside a white lion enclosure in afternoon, pale rock habitat behind fencing, adult man seated recovering on steps with his family and distant blue staff, restrained aftermath, not a battle.",
+    "path": "data/art/backgrounds/lion_public.png"
+  },
+  {
+    "id": "lion_work",
+    "folder": "backgrounds",
+    "refs": [
+      "backgrounds/lion_work"
+    ],
+    "prompt": "Edit this anime zoo environment. There are currently SIX lions: four in front, one upper right, one lower right. Remove ONLY the lower-right small lion head beside the waterfall, replacing it with rock. Keep exactly FIVE total lions: four front bodies plus the one peeking from the upper-right rock. Preserve all other scenery, art style, framing. No people, no text.",
+    "path": "data/art/backgrounds/lion_work.png"
+  },
+  {
+    "id": "office",
+    "folder": "backgrounds",
+    "description": "Zoo director office at early morning, plain wooden desk with a printed file securely taped flat using aged tape, three folded maps in tray, normal office chair and soft dawn through blinds, no readable writing, no supernatural monster.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Zoo director office at early morning, plain wooden desk with a printed file securely taped flat using aged tape, three folded maps in tray, normal office chair and soft dawn through blinds, no readable writing, no supernatural monster. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/office.png"
+  },
+  {
+    "id": "path_afternoon",
+    "folder": "backgrounds",
+    "description": "Beautiful zoo garden path in late afternoon, flower pergola, green foliage, normal small birds in aviary, golden sun and approaching clouds, empty foreground for character sprites.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Beautiful zoo garden path in late afternoon, flower pergola, green foliage, normal small birds in aviary, golden sun and approaching clouds, empty foreground for character sprites.",
+    "path": "data/art/backgrounds/path_afternoon.png"
+  },
+  {
+    "id": "photo_spot",
+    "folder": "backgrounds",
+    "description": "Lovely botanical pergola inside zoo, flowers and sunlit leaves, a normal white bench, inviting afternoon light, ideal quiet place for a couple photograph, no people in foreground.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Lovely botanical pergola inside zoo, flowers and sunlit leaves, a normal white bench, inviting afternoon light, ideal quiet place for a couple photograph, no people in foreground.",
+    "path": "data/art/backgrounds/photo_spot.png"
+  },
+  {
+    "id": "rabbit_day",
+    "folder": "backgrounds",
+    "description": "Beautiful zoo rabbit enclosure on a sunny morning, visible cute white and brown rabbits behind safe low fencing, shrubs, paved visitor walkway, a few anime adult tourists pointing at the animals. Welcoming ordinary zoo.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Beautiful zoo rabbit enclosure on a sunny morning, visible cute white and brown rabbits behind safe low fencing, shrubs, paved visitor walkway, a few anime adult tourists pointing at the animals. Welcoming ordinary zoo. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+    "path": "data/art/backgrounds/rabbit_day.png"
+  },
+  {
+    "id": "rabbit_shadow",
+    "folder": "backgrounds",
+    "description": "Same municipal zoo rabbit enclosure, late morning but a dense patch of shrub shade behind white rabbits feels too deep; walkway empty in foreground, one rabbit turned toward viewer, subtle dread, no visible humanoid monster.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Same municipal zoo rabbit enclosure, late morning but a dense patch of shrub shade behind white rabbits feels too deep; walkway empty in foreground, one rabbit turned toward viewer, subtle dread, no visible humanoid monster. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+    "path": "data/art/backgrounds/rabbit_shadow.png"
+  },
+  {
+    "id": "rest_day",
+    "folder": "backgrounds",
+    "description": "Bright ordinary zoo rest plaza with wooden benches and café awning, water dispenser and vending machine, adult visitors eating sandwiches, lively calm midday, leafy shade from an artificial awning, no rabbits.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Bright ordinary zoo rest plaza with wooden benches and café awning, water dispenser and vending machine, adult visitors eating sandwiches, lively calm midday, leafy shade from an artificial awning, no rabbits.",
+    "path": "data/art/backgrounds/rest_day.png"
+  },
+  {
+    "id": "security",
+    "folder": "backgrounds",
+    "description": "Small ordinary zoo security room adjacent to office corridor, old thermos, chair, hanging coat, old curled paper note pinned on wall with abstract illegible scribbles, afternoon light, grounded weary atmosphere.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Small ordinary zoo security room adjacent to office corridor, old thermos, chair, hanging coat, old curled paper note pinned on wall with abstract illegible scribbles, afternoon light, grounded weary atmosphere. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/security.png"
+  },
+  {
+    "id": "staff_room",
+    "folder": "backgrounds",
+    "description": "Municipal zoo staff preparation room, grey metal lockers, bench, blue spare uniforms, kettle, clipboard, simple electronic clock with illegible face, clean ordinary fluorescent light, quietly lived in.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Municipal zoo staff preparation room, grey metal lockers, bench, blue spare uniforms, kettle, clipboard, simple electronic clock with illegible face, clean ordinary fluorescent light, quietly lived in. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/staff_room.png"
+  },
+  {
+    "id": "storage",
+    "folder": "backgrounds",
+    "description": "Aquarium whale-zone storage corner, large closed industrial collection chest, a separate open document cabinet with an old sheet of paper clipped to board, trolley with sealed food container and rabbit plush, dim blue light, unsettling workplace.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Aquarium whale-zone storage corner, large closed industrial collection chest, a separate open document cabinet with an old sheet of paper clipped to board, trolley with sealed food container and rabbit plush, dim blue light, unsettling workplace. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/storage.png"
+  },
+  {
+    "id": "ticket_window",
+    "folder": "backgrounds",
+    "description": "Close environment view of a modern municipal zoo ticket booth, counter with two paper tickets and folded maps, adult woman clerk behind glass, queue of adult visitors in background, bright morning. Ticket markings only abstract lines.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Close environment view of a modern municipal zoo ticket booth, counter with two paper tickets and folded maps, adult woman clerk behind glass, queue of adult visitors in background, bright morning. Ticket markings only abstract lines. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+    "path": "data/art/backgrounds/ticket_window.png"
+  },
+  {
+    "id": "whale_dead",
+    "folder": "backgrounds",
+    "description": "Huge aquarium whale viewing window at night, the projection-like image of a drowned grey elephant motionless underwater, trunk resting down and limbs unnaturally still, immense weight, cold black-blue water, gallery edge and railing for scale, painterly anime horror, NO gore or exposed organs.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Huge aquarium whale viewing window at night, the projection-like image of a drowned grey elephant motionless underwater, trunk resting down and limbs unnaturally still, immense weight, cold black-blue water, gallery edge and railing for scale, painterly anime horror, NO gore or exposed organs. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/whale_dead.png"
+  },
+  {
+    "id": "whale_swim",
+    "folder": "backgrounds",
+    "description": "Immense aquarium whale viewing window, blue deep water and an enormous normal grey ELEPHANT silhouette swimming like a whale, long trunk and fan ears partially visible through water haze, tiny human-scale rail foreground, disturbing spatial scale, no gore, no people.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Immense aquarium whale viewing window, blue deep water and an enormous normal grey ELEPHANT silhouette swimming like a whale, long trunk and fan ears partially visible through water haze, tiny human-scale rail foreground, disturbing spatial scale, no gore, no people.",
+    "path": "data/art/backgrounds/whale_swim.png"
+  },
+  {
+    "id": "zoo_exit_dawn",
+    "folder": "backgrounds",
+    "description": "View outward through municipal zoo green exit gate at sunrise, normal city street and bus stop beyond, dew, first cleaning cart far away, hopeful warm light, detailed anime background.",
+    "refs": [
+      "gate_day"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. View outward through municipal zoo green exit gate at sunrise, normal city street and bus stop beyond, dew, first cleaning cart far away, hopeful warm light, detailed anime background. Widescreen 16:9 ENVIRONMENT BACKGROUND ONLY. Do not draw main characters or foreground human figures. Show the scenery, architecture, animals or abnormal creatures described. No portrait, no couple, no girl, no protagonist, no employee at front. If needed tiny anonymous distant visitors only where specifically described. Gate reference is STYLE ONLY and do not copy its content. Upper two thirds contain key scenery.",
+    "path": "data/art/backgrounds/zoo_exit_dawn.png"
+  },
+  {
+    "id": "button",
+    "folder": "characters",
+    "description": "Adult Chinese woman about 26 in black collared staff uniform, one collar button repaired using pale thread, black shoulder-length messy hair, frightened unfocused eyes, one sleeve hanging awkwardly, fingers hesitating at collar; vulnerable ambiguous human, no weapons.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Adult Chinese woman about 26 in black collared staff uniform, one collar button repaired using pale thread, black shoulder-length messy hair, frightened unfocused eyes, one sleeve hanging awkwardly, fingers hesitating at collar; vulnerable ambiguous human, no weapons. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/button.png"
+  },
+  {
+    "id": "chen",
+    "folder": "characters",
+    "description": "Adult Chinese woman age 42, ordinary casual muted mauve cardigan and comfortable trousers, shoulder-length brown hair, worried but approachable, holding a cup, guest at night.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Adult Chinese woman age 42, ordinary casual muted mauve cardigan and comfortable trousers, shoulder-length brown hair, worried but approachable, holding a cup, guest at night. Single full-body adult NPC sprite, tall 2:3, true transparent background, no aura. Reference for style only, distinct face and hair, consistent wardrobe.",
+    "path": "data/art/characters/chen.png"
+  },
+  {
+    "id": "director",
+    "folder": "characters",
+    "description": "Chinese woman zoo director about 45, composed mature adult face, dark hair in a practical bun, olive grey blazer and white blouse, dark trousers, calm tired expression, a file folder held at her side.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Chinese woman zoo director about 45, composed mature adult face, dark hair in a practical bun, olive grey blazer and white blouse, dark trousers, calm tired expression, a file folder held at her side. Single full-body adult NPC sprite, tall 2:3, true transparent background, no aura. Reference for style only, distinct face and hair, consistent wardrobe.",
+    "path": "data/art/characters/director.png"
+  },
+  {
+    "id": "du",
+    "folder": "characters",
+    "description": "Chinese male security guard age 36, short practical black hair, tired kind adult face, ordinary charcoal security uniform and peaked cap without writing, sturdy shoes, holding a worn metal thermos, bandage on right index finger.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Chinese male security guard age 36, short practical black hair, tired kind adult face, ordinary charcoal security uniform and peaked cap without writing, sturdy shoes, holding a worn metal thermos, bandage on right index finger. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/du.png"
+  },
+  {
+    "id": "gray",
+    "folder": "characters",
+    "description": "Adult man about 30 in black collared staff uniform, clean black shoes, cuffs faded grey, unnervingly prolonged small smile, human warm hands held slightly forward, staring as if at a piece of paper just outside frame. Anime psychological horror, not a monster.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Adult man about 30 in black collared staff uniform, clean black shoes, cuffs faded grey, unnervingly prolonged small smile, human warm hands held slightly forward, staring as if at a piece of paper just outside frame. Anime psychological horror, not a monster. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/gray.png"
+  },
+  {
+    "id": "he",
+    "folder": "characters",
+    "description": "Chinese male zoo employee age 29, short black hair, friendly practical face, blue short-sleeve collared work shirt and navy trousers, black shoes, clipboard under one arm.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Chinese male zoo employee age 29, short black hair, friendly practical face, blue short-sleeve collared work shirt and navy trousers, black shoes, clipboard under one arm. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/he.png"
+  },
+  {
+    "id": "lin_blush",
+    "folder": "characters",
+    "description": "Same Lin Xia day outfit, shy pleased blush, gaze slightly averted, fingers touching her bag strap; cream cardigan draped over forearm.",
+    "refs": [
+      "lin_day"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Same Lin Xia day outfit, shy pleased blush, gaze slightly averted, fingers touching her bag strap; cream cardigan draped over forearm. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/lin_blush.png"
+  },
+  {
+    "id": "lin_day",
+    "folder": "characters",
+    "transparent": true,
+    "prompt": "Use case: illustration-story. Production character sprite for a polished Japanese-style 2D anime bishoujo visual novel, full body from head to white canvas sneakers, single adult Chinese university woman age 20 named Lin Xia. Consistent definitive identity: warm chestnut shoulder-length hair with softly curled ends, one small rectangular pale-yellow hair clip on her left temple, large warm amber-brown eyes, soft oval face, petite adult proportions, slender but natural. Wearing a modest pale blue summer dress with short sleeves, a thin cream cardigan loosely draped over her forearm, white ankle socks and white canvas sneakers, small tan crossbody bag. Cheerful gentle smile, slight natural blush, hands naturally relaxed, facing viewer three-quarter view. Refined anime linework, delicate cel shading with soft painted highlights, professionally drawn visual novel standing character, exquisite face and hands. FULL entire figure visible, centered, generous transparent margins, no clipped hair or shoes, portrait composition. Genuine transparent background, no shadows on floor, no text, no watermark, no scenery, no rabbit ears or animal accessories. This is the master character appearance for all subsequent variants.",
+    "path": "data/art/characters/lin_day.png"
+  },
+  {
+    "id": "lin_night",
+    "folder": "characters",
+    "description": "Same Lin Xia, wear her cream cardigan properly over the pale blue dress, buttoned halfway for a cool night; gentle quiet smile, hands near bag strap.",
+    "refs": [
+      "lin_day"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Same Lin Xia, wear her cream cardigan properly over the pale blue dress, buttoned halfway for a cool night; gentle quiet smile, hands near bag strap. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/lin_night.png"
+  },
+  {
+    "id": "lin_night_relief",
+    "folder": "characters",
+    "description": "Same Lin Xia, cream cardigan worn over blue dress, tired tearful relieved smile after surviving the night, slightly messy shoulder length chestnut hair, same yellow rectangular hairclip.",
+    "refs": [
+      "lin_day"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Same Lin Xia, cream cardigan worn over blue dress, tired tearful relieved smile after surviving the night, slightly messy shoulder length chestnut hair, same yellow rectangular hairclip. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/lin_night_relief.png"
+  },
+  {
+    "id": "lin_night_scared",
+    "folder": "characters",
+    "description": "Same Lin Xia, cream cardigan worn over pale blue dress, fearful but holding herself together, moist amber eyes, clenched fingers near waist; no wounds.",
+    "refs": [
+      "lin_day"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Same Lin Xia, cream cardigan worn over pale blue dress, fearful but holding herself together, moist amber eyes, clenched fingers near waist; no wounds. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/lin_night_scared.png"
+  },
+  {
+    "id": "lin_worried",
+    "folder": "characters",
+    "description": "Same Lin Xia day outfit, concerned alert expression with slightly tense hands, mouth slightly open, cream cardigan held on forearm.",
+    "refs": [
+      "lin_day"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Same Lin Xia day outfit, concerned alert expression with slightly tense hands, mouth slightly open, cream cardigan held on forearm. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/lin_worried.png"
+  },
+  {
+    "id": "passerby",
+    "folder": "characters",
+    "description": "Adult Chinese woman tourist age 25, coral casual top, beige trousers, running shoes, sunglasses on head, camera strap, cheerful ordinary visitor, single full body character.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Adult Chinese woman tourist age 25, coral casual top, beige trousers, running shoes, sunglasses on head, camera strap, cheerful ordinary visitor, single full body character. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/passerby.png"
+  },
+  {
+    "id": "player",
+    "folder": "characters",
+    "transparent": true,
+    "prompt": "Production high-quality 2D Japanese anime visual novel sprite, single Chinese male university student age 20, warm dark-brown eyes, short slightly tousled black hair, slender average-height adult build, clean-shaven, approachable thoughtful expression, white T-shirt under an open pale sage green casual short-sleeve overshirt, charcoal trousers, white sneakers, small dark daypack on one shoulder. Entire full body including shoes, portrait composition, elegantly drawn face, natural hands, softly painted cel shading, refined linework. True transparent background without shadows/aura, no scenery, no letters, no logos, no watermark. This is the definitive male lead identity for a contemporary youth romance psychological horror galgame.",
+    "path": "data/art/characters/player.png"
+  },
+  {
+    "id": "su_blue",
+    "folder": "characters",
+    "transparent": true,
+    "prompt": "Production anime visual novel standing sprite, one adult Chinese university woman Su Wanqing age 21. Definitive character identity: dark straight black hair tied in a low ponytail with a plain black band, short loose fringe, cool dark brown eyes, oval face, slim adult proportions, quietly responsible expression with a slight tiredness. Blue collared municipal zoo work shirt, long navy practical trousers, black athletic shoes, plain electronic watch, simple blue work cap in one hand. Entire full body visible from hair to shoes, natural relaxed alert pose facing viewer, centered portrait composition with ample margins. Gorgeous refined 2D anime linework and painterly cel shading, matching an elegant modern romance-horror galgame. True transparent background, NO colored aura, NO floor shadows, no text, logos, watermark, scenery, cropped feet. Nonsexualized professional adult appearance.",
+    "path": "data/art/characters/su_blue.png"
+  },
+  {
+    "id": "su_blue_tense",
+    "folder": "characters",
+    "description": "Same Su Wanqing in blue work shirt and navy trousers, cap worn low, tense responsible expression, small sweat on temple, one hand indicating visitors should step back.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Same Su Wanqing in blue work shirt and navy trousers, cap worn low, tense responsible expression, small sweat on temple, one hand indicating visitors should step back. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/su_blue_tense.png"
+  },
+  {
+    "id": "su_red",
+    "folder": "characters",
+    "description": "Same Su Wanqing, now wearing a muted crimson red LONG SLEEVE collared work shirt instead of blue, same navy trousers, black sneakers, ponytail and electronic watch. No cap. Composed attentive expression.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Same Su Wanqing, now wearing a muted crimson red LONG SLEEVE collared work shirt instead of blue, same navy trousers, black sneakers, ponytail and electronic watch. No cap. Composed attentive expression. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/su_red.png"
+  },
+  {
+    "id": "su_red_tired",
+    "folder": "characters",
+    "description": "Same Su Wanqing in muted crimson red long sleeve work shirt and navy trousers, ponytail slightly untidy, tired fearful determined expression, one hand gripping opposite wrist. No cap, no wounds.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Same Su Wanqing in muted crimson red long sleeve work shirt and navy trousers, ponytail slightly untidy, tired fearful determined expression, one hand gripping opposite wrist. No cap, no wounds. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/su_red_tired.png"
+  },
+  {
+    "id": "wei",
+    "folder": "characters",
+    "description": "Adult Chinese man age 30, charcoal casual jacket, tired impatient expression, short hair, smartphone in one hand, everyday museum guest.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Adult Chinese man age 30, charcoal casual jacket, tired impatient expression, short hair, smartphone in one hand, everyday museum guest. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/wei.png"
+  },
+  {
+    "id": "xulan",
+    "folder": "characters",
+    "description": "Adult Chinese woman age 27, short straight dark bob with side part, cool grey-brown eyes, restrained no-nonsense face, crimson red long-sleeved collared staff shirt and black work trousers, practical black shoes, clipboard, calm senior night supervisor.",
+    "refs": [
+      "su_blue"
+    ],
+    "prompt": "Use case: illustration-story. Original professional 2D Japanese anime visual novel production artwork, beautiful refined line art, painted cel shading, coherent contemporary Chinese municipal zoo romance-horror setting. No photorealistic faces, no 3D rendering, no UI, NO readable text, logos, signatures, watermarks or panel divisions. Adult Chinese woman age 27, short straight dark bob with side part, cool grey-brown eyes, restrained no-nonsense face, crimson red long-sleeved collared staff shirt and black work trousers, practical black shoes, clipboard, calm senior night supervisor. SINGLE full-body standing adult character, portrait 2:3 composition, head and shoes fully visible with generous margins, centered natural pose, true transparent background with NO colored backdrop, floor shadow or aura. References lock facial identity, hair, age, proportions and art style. If the description names a new supporting character, use reference only for art style and give that character a distinct adult face.",
+    "path": "data/art/characters/xulan.png"
+  },
+  {
+    "id": "confession",
+    "folder": "covers",
+    "refs": [
+      "covers/confession",
+      "backgrounds/guest_dark"
+    ],
+    "prompt": "Edit first image. Keep the same two adult anime characters, exact faces, clothing, intimate supportive pose, paper tightly held in the young man's left hand, framing and delicate emotional acting. Change only ROOM BACKGROUND: it is the plain closed two-bed guest room shown in second reference. REMOVE the bright fish tank window and all sharks/fish/underwater view behind them, replace with dark plain wall and closed wooden door from second reference. Night lamp OFF. Cinematic low ambient exposure makes faces softly readable without drawing a new light source. Darken background substantially. No UI/text.",
+    "path": "data/art/covers/confession.png"
+  },
+  {
+    "id": "employee",
+    "folder": "covers",
+    "refs": [
+      "characters/su_blue"
+    ],
+    "description": "Single 16:9 cinematic 2D anime chapter cover. ONLY the adult black low ponytail woman in reference, SAME face and BLACK hair NO hairclip, now wearing crimson RED LONG SLEEVE collared work shirt navy trousers wristwatch. She stands tense in a dark aquarium WHALE gallery, huge eerie drowned grey elephant shape behind distant tank glass, no jellyfish mixed into whale tank, no girl with chestnut hair, no text.",
+    "path": "data/art/covers/employee.png",
+    "prompt": "Single 16:9 cinematic 2D anime chapter cover. ONLY the adult black low ponytail woman in reference, SAME face and BLACK hair NO hairclip, now wearing crimson RED LONG SLEEVE collared work shirt navy trousers wristwatch. She stands tense in a dark aquarium WHALE gallery, huge eerie drowned grey elephant shape behind distant tank glass, no jellyfish mixed into whale tank, no girl with chestnut hair, no text."
+  },
+  {
+    "id": "opening",
+    "folder": "covers",
+    "refs": [
+      "covers/opening"
+    ],
+    "prompt": "Edit image preserving exact composition and all character identities. Change ONLY the uniform worn by the ponytailed female employee on far right: make her collared shirt muted crimson RED and LONG-SLEEVED, navy trousers unchanged. Keep Lin Xia light-blue dress, cardigan, face, hair, male visitor, and all background unchanged. No writing, no UI.",
+    "path": "data/art/covers/opening.png"
+  },
+  {
+    "id": "visitor",
+    "folder": "covers",
+    "description": "Chapter promotional key visual: Lin Xia smiling shyly at university male protagonist on a sunny zoo path, both full recognizable consistent reference appearance, delicate youthful romance, foliage and rabbit enclosure behind, spacious cinematic composition, no text.",
+    "refs": [
+      "lin_day",
+      "su_blue",
+      "player"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Chapter promotional key visual: Lin Xia smiling shyly at university male protagonist on a sunny zoo path, both full recognizable consistent reference appearance, delicate youthful romance, foliage and rabbit enclosure behind, spacious cinematic composition, no text. Widescreen 16:9 single cinematic scene. Use reference images as identity references ONLY for explicitly requested characters. Do not add extra characters merely because supplied as reference. Preserve requested protagonists' face, hairstyle, hairclip, costume, adult age, anime style exactly. Night Lin Xia cream cardigan over pale blue dress, unless resting cardigan under wrist as described. Upper two thirds important acting. No split panels.",
+    "path": "data/art/covers/visitor.png"
+  },
+  {
+    "id": "BE1",
+    "folder": "endings",
+    "refs": [],
+    "description": "DAYTIME zoo path, horror aftermath still under afternoon daylight. An EMPTY collapsed BLUE work shirt beside a clipboard covered in illegible repeated marks, pen rolling across concrete, unsettling pale rabbit-like shadow in shrubs. NO human figures or faces anywhere. No nighttime, no gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. DAYTIME zoo path, horror aftermath still under afternoon daylight. An EMPTY collapsed BLUE work shirt beside a clipboard covered in illegible repeated marks, pen rolling across concrete, unsettling pale rabbit-like shadow in shrubs. NO human figures or faces anywhere. No nighttime, no gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BE1.png"
+  },
+  {
+    "id": "BE2",
+    "folder": "endings",
+    "refs": [],
+    "description": "DAYTIME white lion zoo rescue aftermath. Foreground empty BLUE work glove and dropped clipboard, white lion looming beyond service railing. Far background tiny anonymous male blue-uniform worker protecting an adult male visitor. No women anywhere, no foreground people. Daylight and unbearable dread, no gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. DAYTIME white lion zoo rescue aftermath. Foreground empty BLUE work glove and dropped clipboard, white lion looming beyond service railing. Far background tiny anonymous male blue-uniform worker protecting an adult male visitor. No women anywhere, no foreground people. Daylight and unbearable dread, no gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BE2.png"
+  },
+  {
+    "id": "BE3",
+    "folder": "endings",
+    "refs": [
+      "su_blue"
+    ],
+    "description": "DAYTIME behind zoo maintenance wall, horror loss of identity. ONLY the black-low-ponytail adult woman from reference crouches in a loose BLUE staff shirt in deep shadow; silhouette beginning to resemble a rabbit, eyes reflecting faint red, dropped electronic watch on concrete. Daylight visible beyond wall. No second woman, no yellow hairclip, no exposed flesh or gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. DAYTIME behind zoo maintenance wall, horror loss of identity. ONLY the black-low-ponytail adult woman from reference crouches in a loose BLUE staff shirt in deep shadow; silhouette beginning to resemble a rabbit, eyes reflecting faint red, dropped electronic watch on concrete. Daylight visible beyond wall. No second woman, no yellow hairclip, no exposed flesh or gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BE3.png"
+  },
+  {
+    "id": "BE4",
+    "folder": "endings",
+    "refs": [
+      "su_blue"
+    ],
+    "description": "Psychological horror in dim aquarium blue hall. ONLY same adult woman with BLACK low ponytail from reference now in BLACK staff shirt and dark trousers, fragmented vacant expression. Her right hand reaches toward a visitor map held by an anonymous off-camera person's hand; her left hand restrains her own right wrist. No second face, no girl in dress, no hairclip. Small human tragedy, no gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Psychological horror in dim aquarium blue hall. ONLY same adult woman with BLACK low ponytail from reference now in BLACK staff shirt and dark trousers, fragmented vacant expression. Her right hand reaches toward a visitor map held by an anonymous off-camera person's hand; her left hand restrains her own right wrist. No second face, no girl in dress, no hairclip. Small human tragedy, no gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BE4.png"
+  },
+  {
+    "id": "BE5",
+    "folder": "endings",
+    "refs": [],
+    "description": "Late NIGHT aquarium guestroom corridor horror aftermath. Cropped female hand and CRIMSON LONG SLEEVE pulled out of frame by completely unseen force. Dropped clipboard with illegible marks and one blank checkbox, a door crack emitting impossible thin light, warped bed shadow. NO visible faces or full people, no physical monster, no gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Late NIGHT aquarium guestroom corridor horror aftermath. Cropped female hand and CRIMSON LONG SLEEVE pulled out of frame by completely unseen force. Dropped clipboard with illegible marks and one blank checkbox, a door crack emitting impossible thin light, warped bed shadow. NO visible faces or full people, no physical monster, no gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BE5.png"
+  },
+  {
+    "id": "BE6",
+    "folder": "endings",
+    "refs": [
+      "su_blue",
+      "gray"
+    ],
+    "description": "Midnight aquarium entrance, betrayal horror. Same adult BLACK LOW PONYTAIL woman from first reference wearing RED LONG SLEEVE staff shirt and navy trousers struggles on pavement reaching toward illuminated doorway. Second reference is the male black-uniform worker with grey cuffs, standing back and releasing her. ONLY these two adults, no chestnut-haired woman. Invisible pressure twists the shadow but no visible creature or gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Midnight aquarium entrance, betrayal horror. Same adult BLACK LOW PONYTAIL woman from first reference wearing RED LONG SLEEVE staff shirt and navy trousers struggles on pavement reaching toward illuminated doorway. Second reference is the male black-uniform worker with grey cuffs, standing back and releasing her. ONLY these two adults, no chestnut-haired woman. Invisible pressure twists the shadow but no visible creature or gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BE6.png"
+  },
+  {
+    "id": "BE7",
+    "folder": "endings",
+    "refs": [
+      "su_blue"
+    ],
+    "description": "Midnight OUTSIDE closed aquarium entrance. ONLY same adult BLACK LOW PONYTAIL woman from reference wearing RED LONG SLEEVE staff shirt and navy trousers, isolated, exhausted reaching for light behind glass. Her shadow angles impossibly away from her feet into darkness. NO visible monster, no second person, no yellow hairclip. Claustrophobic dread.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Midnight OUTSIDE closed aquarium entrance. ONLY same adult BLACK LOW PONYTAIL woman from reference wearing RED LONG SLEEVE staff shirt and navy trousers, isolated, exhausted reaching for light behind glass. Her shadow angles impossibly away from her feet into darkness. NO visible monster, no second person, no yellow hairclip. Claustrophobic dread. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BE7.png"
+  },
+  {
+    "id": "BE8",
+    "folder": "endings",
+    "refs": [],
+    "description": "Single widescreen 16:9 2D anime illustration of an EMPTY wooden storage chest in a quiet dark aquarium storeroom, neatly folded red cloth and an ordinary rabbit plush toy inside. Lid partially closed, a narrow beam of cold light creates a claustrophobic suspenseful composition. Absolutely no people, no hands or body parts, no food, no injury or violence, no text. Detailed painterly anime style.",
+    "path": "data/art/endings/BE8.png",
+    "prompt": "Single widescreen 16:9 2D anime illustration of an EMPTY wooden storage chest in a quiet dark aquarium storeroom, neatly folded red cloth and an ordinary rabbit plush toy inside. Lid partially closed, a narrow beam of cold light creates a claustrophobic suspenseful composition. Absolutely no people, no hands or body parts, no food, no injury or violence, no text. Detailed painterly anime style."
+  },
+  {
+    "id": "BE9",
+    "folder": "endings",
+    "refs": [],
+    "description": "Dawn aquarium whale tank gallery, uncanny aftermath. Huge dark whale swims behind glass as if nothing happened. Foreground only a discarded CRIMSON RED LONG SLEEVE cuff and electronic watch reflected at an impossible angle on wet tile. NO people or faces, no physical creature outside tank, no gore. Quiet wrongness.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Dawn aquarium whale tank gallery, uncanny aftermath. Huge dark whale swims behind glass as if nothing happened. Foreground only a discarded CRIMSON RED LONG SLEEVE cuff and electronic watch reflected at an impossible angle on wet tile. NO people or faces, no physical creature outside tank, no gore. Quiet wrongness. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BE9.png"
+  },
+  {
+    "id": "BV1",
+    "folder": "endings",
+    "refs": [
+      "lin_day",
+      "player"
+    ],
+    "description": "DAYTIME sunny zoo trees, horror interruption of a date. Same adult male in sage green overshirt from second reference, part-hidden against dense grass, torso rigid and shadow eerily elongated; same chestnut-haired adult Lin Xia in pale blue short sleeve dress and yellow hairclip from first reference stretches her hand from path but cannot reach. Cream cardigan over forearm. Clearly afternoon daylight, NO moon, no night, no visible monster, no gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. DAYTIME sunny zoo trees, horror interruption of a date. Same adult male in sage green overshirt from second reference, part-hidden against dense grass, torso rigid and shadow eerily elongated; same chestnut-haired adult Lin Xia in pale blue short sleeve dress and yellow hairclip from first reference stretches her hand from path but cannot reach. Cream cardigan over forearm. Clearly afternoon daylight, NO moon, no night, no visible monster, no gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BV1.png"
+  },
+  {
+    "id": "BV2",
+    "description": "Edit this exact 2D anime image into psychological horror. Preserve identities, clothes, DAYTIME and zoo fence composition. REMOVE the carrots entirely. Both college adults have frightened, blank, frozen faces, NO smiles. Their hands clutch the inside of the fence as if trapped. White rabbits stare motionlessly at them. Slight unnatural rabbit-shaped shadows behind couple. No extra animals or people, no injury, no text.",
+    "folder": "endings",
+    "path": "data/art/endings/BV2.png",
+    "refs": [
+      "data/art/endings/BV2.png (previous composition)"
+    ],
+    "prompt": "Edit this exact 2D anime image into psychological horror. Preserve identities, clothes, DAYTIME and zoo fence composition. REMOVE the carrots entirely. Both college adults have frightened, blank, frozen faces, NO smiles. Their hands clutch the inside of the fence as if trapped. White rabbits stare motionlessly at them. Slight unnatural rabbit-shaped shadows behind couple. No extra animals or people, no injury, no text."
+  },
+  {
+    "id": "BV3",
+    "folder": "endings",
+    "refs": [
+      "lin_day",
+      "player"
+    ],
+    "description": "DAYTIME zoo elephant enclosure psychological horror. Male student in sage green overshirt from second reference kneels gripping his throat as if drowning in AIR, unseen pressure only. Lin Xia pale blue dress chestnut hair yellow clip from first reference reaches toward him from OUTSIDE separated railing. Far away behind enclosure an indistinct WHITE ELEPHANT shape out of focus. ABSOLUTELY NO trunk, hand, tentacle, or visible creature touching or lifting anybody. Afternoon light, distorted oppressive perception, no gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. DAYTIME zoo elephant enclosure psychological horror. Male student in sage green overshirt from second reference kneels gripping his throat as if drowning in AIR, unseen pressure only. Lin Xia pale blue dress chestnut hair yellow clip from first reference reaches toward him from OUTSIDE separated railing. Far away behind enclosure an indistinct WHITE ELEPHANT shape out of focus. ABSOLUTELY NO trunk, hand, tentacle, or visible creature touching or lifting anybody. Afternoon light, distorted oppressive perception, no gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BV3.png"
+  },
+  {
+    "id": "BV4",
+    "folder": "endings",
+    "refs": [
+      "lin_day",
+      "player"
+    ],
+    "description": "Tightly cropped psychological horror image with NO sky, windows or time-of-day indicators. Same male student sage green shirt crouched on concrete, fingers stiff; chestnut-haired Lin Xia pale blue dress yellow clip crouches beside him frightened and tries to hold his shoulder. Cream cardigan worn over dress. Discarded food packet beside them, their cast shadow vaguely wrong and goat-like. Deep neutral shadows can fit daytime shade OR night. No literal goat attacking, no gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Tightly cropped psychological horror image with NO sky, windows or time-of-day indicators. Same male student sage green shirt crouched on concrete, fingers stiff; chestnut-haired Lin Xia pale blue dress yellow clip crouches beside him frightened and tries to hold his shoulder. Cream cardigan worn over dress. Discarded food packet beside them, their cast shadow vaguely wrong and goat-like. Deep neutral shadows can fit daytime shade OR night. No literal goat attacking, no gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BV4.png"
+  },
+  {
+    "id": "BV5",
+    "description": "Edit this exact anime scene preserving the three adults, their clothing, faces, positions and aquarium night background. Change ONLY the paper in black-clothed man's hands: he is tearing a SMALL narrow strip torn from a map along dotted perforation, not two large map halves. Small irregular scrap with faint pale green markings, at most palm size. Remove large sheets and falling scraps. All other details unchanged, no readable text.",
+    "folder": "endings",
+    "path": "data/art/endings/BV5.png",
+    "refs": [
+      "data/art/endings/BV5.png (previous composition)"
+    ],
+    "prompt": "Edit this exact anime scene preserving the three adults, their clothing, faces, positions and aquarium night background. Change ONLY the paper in black-clothed man's hands: he is tearing a SMALL narrow strip torn from a map along dotted perforation, not two large map halves. Small irregular scrap with faint pale green markings, at most palm size. Remove large sheets and falling scraps. All other details unchanged, no readable text."
+  },
+  {
+    "id": "BV6",
+    "folder": "endings",
+    "refs": [
+      "lin_day",
+      "player"
+    ],
+    "description": "Pitch-dark CLOSED aquarium guest bedroom at NIGHT, plain walls, two beds, shut door, NO windows or fish tank. Bedside lamp SWITCHED OFF and not glowing. Same Lin Xia chestnut hair yellow clip wearing cream cardigan over blue dress sits frozen on bed holding same male student's hand; he is in sage green overshirt, face in deep shadow, his wall shadow grotesquely stretched unlike his body. Very dim blue ambient visibility, unseen threat with NO concrete monster, no gore.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Pitch-dark CLOSED aquarium guest bedroom at NIGHT, plain walls, two beds, shut door, NO windows or fish tank. Bedside lamp SWITCHED OFF and not glowing. Same Lin Xia chestnut hair yellow clip wearing cream cardigan over blue dress sits frozen on bed holding same male student's hand; he is in sage green overshirt, face in deep shadow, his wall shadow grotesquely stretched unlike his body. Very dim blue ambient visibility, unseen threat with NO concrete monster, no gore. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/BV6.png"
+  },
+  {
+    "id": "BX1",
+    "folder": "endings",
+    "refs": [
+      "endings/BX1"
+    ],
+    "description": "Edit this image preserving the two adults' identities, clothing, poses, rabbit plush, gate and unsettling mood exactly. Change ONLY the time and lighting to clear DAYTIME around 15:30, pale blue sky and natural afternoon daylight. Outdoor gate lights unlit. NO sunset, no twilight, no night. Same 2D anime rendering, no text.",
+    "path": "data/art/endings/BX1.png",
+    "prompt": "Edit this image preserving the two adults' identities, clothing, poses, rabbit plush, gate and unsettling mood exactly. Change ONLY the time and lighting to clear DAYTIME around 15:30, pale blue sky and natural afternoon daylight. Outdoor gate lights unlit. NO sunset, no twilight, no night. Same 2D anime rendering, no text."
+  },
+  {
+    "id": "NE1",
+    "folder": "endings",
+    "refs": [
+      "su_blue"
+    ],
+    "description": "Dawn employee dormitory. ONLY Su Wanqing, same BLACK LOW PONYTAIL woman as reference, blue short sleeve staff shirt, navy trousers, seated beside bed untying black shoes, exhausted ordinary human relief. No other people. No hairclip.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Dawn employee dormitory. ONLY Su Wanqing, same BLACK LOW PONYTAIL woman as reference, blue short sleeve staff shirt, navy trousers, seated beside bed untying black shoes, exhausted ordinary human relief. No other people. No hairclip. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/NE1.png"
+  },
+  {
+    "id": "NE2",
+    "folder": "endings",
+    "refs": [
+      "su_blue"
+    ],
+    "description": "Morning street breakfast stall. ONLY same Su Wanqing BLACK low ponytail woman as reference, crimson RED LONG SLEEVE work shirt, navy trousers, eating a steamed bun beside soy milk. Quiet shaken relief, dawn sunlight. No other foreground person, no yellow hairclip.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Morning street breakfast stall. ONLY same Su Wanqing BLACK low ponytail woman as reference, crimson RED LONG SLEEVE work shirt, navy trousers, eating a steamed bun beside soy milk. Quiet shaken relief, dawn sunlight. No other foreground person, no yellow hairclip. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/NE2.png"
+  },
+  {
+    "id": "NV1",
+    "folder": "endings",
+    "description": "Early safe date ending: same Lin Xia and male student boarding an ordinary city bus together in soft late afternoon light, smiling in relief, zoo gate far behind, warm everyday romance.",
+    "refs": [
+      "lin_day",
+      "su_blue",
+      "player"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Early safe date ending: same Lin Xia and male student boarding an ordinary city bus together in soft late afternoon light, smiling in relief, zoo gate far behind, warm everyday romance. Widescreen 16:9 single cinematic scene. Use reference images as identity references ONLY for explicitly requested characters. Do not add extra characters merely because supplied as reference. Preserve requested protagonists' face, hairstyle, hairclip, costume, adult age, anime style exactly. Night Lin Xia cream cardigan over pale blue dress, unless resting cardigan under wrist as described. Upper two thirds important acting. No split panels.",
+    "path": "data/art/endings/NV1.png"
+  },
+  {
+    "id": "NV2",
+    "folder": "endings",
+    "refs": [
+      "characters/du",
+      "characters/lin_day",
+      "characters/player"
+    ],
+    "description": "Single widescreen 16:9 2D anime visual novel scene, NIGHT zoo exit. Adult MALE SECURITY GUARD from first reference with short black hair peaked security cap charcoal GREY uniform thermos, stands politely apart opening gate for two students. Lin Xia chestnut hair yellow clip pale blue dress cream cardigan worn properly from second reference, and male student sage green overshirt from third reference, walk toward taxi together. Girl holds BOY's arm, never guard's. Preserve exact identities. No female blue staff anywhere, no extra people, no text.",
+    "path": "data/art/endings/NV2.png",
+    "prompt": "Single widescreen 16:9 2D anime visual novel scene, NIGHT zoo exit. Adult MALE SECURITY GUARD from first reference with short black hair peaked security cap charcoal GREY uniform thermos, stands politely apart opening gate for two students. Lin Xia chestnut hair yellow clip pale blue dress cream cardigan worn properly from second reference, and male student sage green overshirt from third reference, walk toward taxi together. Girl holds BOY's arm, never guard's. Preserve exact identities. No female blue staff anywhere, no extra people, no text."
+  },
+  {
+    "id": "NV3",
+    "folder": "endings",
+    "description": "Bittersweet dawn ending: same Lin Xia in cream cardigan and male student sit with respectful small space between them at morning bus stop, gentle tired faces, separate shadows, uncertain but hopeful relationship.",
+    "refs": [
+      "lin_day",
+      "su_blue",
+      "player"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Bittersweet dawn ending: same Lin Xia in cream cardigan and male student sit with respectful small space between them at morning bus stop, gentle tired faces, separate shadows, uncertain but hopeful relationship. Widescreen 16:9 single cinematic scene. Use reference images as identity references ONLY for explicitly requested characters. Do not add extra characters merely because supplied as reference. Preserve requested protagonists' face, hairstyle, hairclip, costume, adult age, anime style exactly. Night Lin Xia cream cardigan over pale blue dress, unless resting cardigan under wrist as described. Upper two thirds important acting. No split panels.",
+    "path": "data/art/endings/NV3.png"
+  },
+  {
+    "id": "TE",
+    "folder": "endings",
+    "refs": [
+      "su_blue"
+    ],
+    "description": "Dawn in the zoo director's ordinary office. ONLY Su Wanqing, an adult 21-year-old woman with BLACK low ponytail, dark eyes, NO hairclip, wearing CRIMSON RED LONG SLEEVE staff shirt and navy trousers, sits tired but resolute before a wooden desk with a warm tea cup and a taped page with illegible lines. Morning light, earned restrained hope. Same woman as reference, absolutely no chestnut hair or yellow clip.",
+    "prompt": "Single widescreen 16:9 cinematic ending illustration for a polished 2D JAPANESE ANIME visual novel. Clean fine linework, detailed painted cel shading, expressive adult characters, contemporary Chinese municipal zoo. No photorealism, no 3D, no UI, no text, no watermark, no collage. Dawn in the zoo director's ordinary office. ONLY Su Wanqing, an adult 21-year-old woman with BLACK low ponytail, dark eyes, NO hairclip, wearing CRIMSON RED LONG SLEEVE staff shirt and navy trousers, sits tired but resolute before a wooden desk with a warm tea cup and a taped page with illegible lines. Morning light, earned restrained hope. Same woman as reference, absolutely no chestnut hair or yellow clip. Use supplied images ONLY as character identity references, not their poses or framing. Character identities and genders must match exactly; never add unrequested people. Important action in upper two thirds, widescreen atmospheric composition.",
+    "path": "data/art/endings/TE.png"
+  },
+  {
+    "id": "TV",
+    "folder": "endings",
+    "description": "Tender true ending at dawn outside zoo: same Lin Xia in cream cardigan gently holding same male student left hand, they smile exhausted but alive beside a normal bus stop, warm sunrise, crumpled map in his other hand. Hopeful anime romance CG.",
+    "refs": [
+      "lin_day",
+      "su_blue",
+      "player"
+    ],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Tender true ending at dawn outside zoo: same Lin Xia in cream cardigan gently holding same male student left hand, they smile exhausted but alive beside a normal bus stop, warm sunrise, crumpled map in his other hand. Hopeful anime romance CG. Widescreen 16:9 single cinematic scene. Use reference images as identity references ONLY for explicitly requested characters. Do not add extra characters merely because supplied as reference. Preserve requested protagonists' face, hairstyle, hairclip, costume, adult age, anime style exactly. Night Lin Xia cream cardigan over pale blue dress, unless resting cardigan under wrist as described. Upper two thirds important acting. No split panels.",
+    "path": "data/art/endings/TV.png"
+  },
+  {
+    "id": "blood",
+    "folder": "items",
+    "description": "Small capped transparent bottle containing very dark ruby red liquid, plain cream rectangular label with only two short illegible marks, unsettling zoo shop item, no spilled blood, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Small capped transparent bottle containing very dark ruby red liquid, plain cream rectangular label with only two short illegible marks, unsettling zoo shop item, no spilled blood, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/blood.png"
+  },
+  {
+    "id": "coins",
+    "folder": "items",
+    "description": "Small modest wallet with a few coins and unmarked banknote edges, everyday university student belongings, no real currency detail, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Small modest wallet with a few coins and unmarked banknote edges, everyday university student belongings, no real currency detail, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/coins.png"
+  },
+  {
+    "id": "firstaid",
+    "folder": "items",
+    "description": "Small package of simple adhesive bandages and a folded tissue, friendly practical date supplies, no branding or readable text, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Small package of simple adhesive bandages and a folded tissue, friendly practical date supplies, no branding or readable text, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/firstaid.png"
+  },
+  {
+    "id": "handbook",
+    "folder": "items",
+    "description": "Blue cloth-bound employee handbook with a small elephant pictogram, final paper page protruding with dashed tear line, no words, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Blue cloth-bound employee handbook with a small elephant pictogram, final paper page protruding with dashed tear line, no words, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/handbook.png"
+  },
+  {
+    "id": "map",
+    "folder": "items",
+    "description": "One folded zoo visitor map opened partly, colored paths and simple animal pictograms, a clearly visible dashed tear line on right edge, no readable text, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. One folded zoo visitor map opened partly, colored paths and simple animal pictograms, a clearly visible dashed tear line on right edge, no readable text, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/map.png"
+  },
+  {
+    "id": "map_piece",
+    "folder": "items",
+    "description": "A small torn section of cream zoo map, ragged edge exactly along a dashed perforation, creased from being held, simple green paths and tiny animal pictograms, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. A small torn section of cream zoo map, ragged edge exactly along a dashed perforation, creased from being held, simple green paths and tiny animal pictograms, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/map_piece.png"
+  },
+  {
+    "id": "meat",
+    "folder": "items",
+    "description": "Sealed transparent rectangular food container holding a small piece of dark raw goat meat, pale label with illegible strokes, non-gory food prop, isolated.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Sealed transparent rectangular food container holding a small piece of dark raw goat meat, pale label with illegible strokes, non-gory food prop, isolated. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/meat.png"
+  },
+  {
+    "id": "note",
+    "folder": "items",
+    "description": "Old folded offwhite paper note, different weights of illegible handwritten strokes, some crossed-out lines and tiny distorted rabbit-eared elephant sketch, no actual text, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Old folded offwhite paper note, different weights of illegible handwritten strokes, some crossed-out lines and tiny distorted rabbit-eared elephant sketch, no actual text, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/note.png"
+  },
+  {
+    "id": "rabbit_toy",
+    "folder": "items",
+    "description": "Small cute white rabbit plush toy, pink inner ears, black bead eyes and blue ribbon, ordinary gift shop souvenir that can become ominous, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Small cute white rabbit plush toy, pink inner ears, black bead eyes and blue ribbon, ordinary gift shop souvenir that can become ominous, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/rabbit_toy.png"
+  },
+  {
+    "id": "red_manual",
+    "folder": "items",
+    "description": "Red cloth-bound aquarium staff handbook with subtle jellyfish pictogram, no words, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Red cloth-bound aquarium staff handbook with subtle jellyfish pictogram, no words, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/red_manual.png"
+  },
+  {
+    "id": "ticket",
+    "folder": "items",
+    "description": "One original zoo admission ticket, cream paper with pale blue animal silhouettes and perforated short edge, printed rule-like horizontal strokes on reverse corner, no readable words, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. One original zoo admission ticket, cream paper with pale blue animal silhouettes and perforated short edge, printed rule-like horizontal strokes on reverse corner, no readable words, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/ticket.png"
+  },
+  {
+    "id": "water",
+    "folder": "items",
+    "description": "Ordinary unopened clear plastic drinking water bottle with plain pale blue label, realistic highlights within anime illustration, no branding, isolated prop.",
+    "refs": [],
+    "prompt": "Production artwork for an original 2D Japanese anime visual novel, refined line art and painted cel shading, contemporary Chinese municipal zoo romance horror. No photorealism, no 3D, no UI, no readable text, logos, watermark or panels. Ordinary unopened clear plastic drinking water bottle with plain pale blue label, realistic highlights within anime illustration, no branding, isolated prop. Single detailed isolated inventory object, square format with true transparent background. No human body or hand. No captions. Item only.",
+    "path": "data/art/items/water.png"
+  }
+]

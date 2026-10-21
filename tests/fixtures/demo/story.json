@@ -1,0 +1,428 @@
+{
+  "StoryName": "动物园 · 留园须知",
+  "script": "script.py",
+  "title": {
+    "subtitle": "一次普通的游园，一张不太普通的地图。\n可游玩的三章流程示例。",
+    "background": null
+  },
+  "achievements": [
+    {
+      "id": "visitor",
+      "title": "第一位访客",
+      "description": "领取入园资料。"
+    },
+    {
+      "id": "map_reader",
+      "title": "纸上的另一条路",
+      "description": "在背包中查看地图。"
+    },
+    {
+      "id": "home",
+      "title": "平安离园",
+      "description": "按照地图上的路线离开动物园。"
+    }
+  ],
+  "items": [
+    {
+      "id": "map",
+      "name": "游园地图",
+      "description": "服务台印制的折页。蓝色步道通向出口，员工通道不对游客开放。可以随时展开查看。",
+      "on_use": [
+        {
+          "function": {
+            "name": "read_map",
+            "args": {}
+          }
+        },
+        {
+          "property": "achievement",
+          "options": "complete",
+          "value": "map_reader"
+        },
+        {
+          "property": "dialogue",
+          "value": "你展开地图：入口 → 草食动物区 → 蓝色步道 → 出口。\n右下角印着一行小字：如果广播提及不存在的动物，请沿蓝色步道离园。"
+        }
+      ]
+    },
+    {
+      "id": "goat_blood",
+      "name": "山羊血样",
+      "description": "兽医交给你的密封试管，标签写着“勿开启”。在草食动物区出示给巡查员，可以得到他的协助。",
+      "consume": 1,
+      "on_use": [
+        {
+          "function": {
+            "name": "show_sample",
+            "args": {}
+          }
+        }
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "arrival",
+      "title": "第一章 · 今日开放",
+      "subtitle": "09:00  /  南门游客服务处",
+      "background": null,
+      "contents": [
+        {
+          "id": "START",
+          "title": "领取入园资料",
+          "actions": [
+            {
+              "property": "dialogue",
+              "value": "售票机吐出一张温热的门票。围栏刚刚刷过漆，远处传来孩子们的笑声。\n工作人员递给你一份地图：“今天正常开放，请先看看守则。”"
+            },
+            {
+              "property": "item",
+              "options": "get",
+              "value": "map"
+            },
+            {
+              "property": "achievement",
+              "options": "complete",
+              "value": "visitor"
+            },
+            {
+              "property": "rules",
+              "value": {
+                "book_id": "visitor",
+                "title": "游客守则",
+                "entries": [
+                  {
+                    "id": "1",
+                    "text": "请沿蓝色步道游览。绿色通道仅供员工使用。"
+                  },
+                  {
+                    "id": "2",
+                    "text": "本园没有长角的兔子。发现标识错误时，请联系巡查员。"
+                  }
+                ]
+              }
+            },
+            {
+              "property": "popup",
+              "options": "show",
+              "title": "游园提示",
+              "value": "<green>规则已更新，请查看。</green>\n通过<blue>规则界面</blue>查看收集到的所有告示和规则。\n已获得游园地图，可在背包中使用。"
+            }
+          ]
+        },
+        {
+          "id": "route",
+          "title": "入口的小请求",
+          "actions": [
+            {
+              "property": "dialogue",
+              "value": "草食动物区的指示牌旁，一名兽医正在寻找愿意帮忙的游客。"
+            },
+            {
+              "property": "decision",
+              "value": [
+                {
+                  "text": "帮兽医递送样本",
+                  "next_id": "sample"
+                },
+                {
+                  "text": "直接前往草食动物区",
+                  "next_id": "walk"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sample",
+          "title": "接过密封试管",
+          "actions": [
+            {
+              "function": {
+                "name": "remember_route",
+                "args": {
+                  "route": "sample"
+                }
+              }
+            },
+            {
+              "property": "item",
+              "options": "get",
+              "value": "goat_blood"
+            },
+            {
+              "property": "dialogue",
+              "value": "兽医递来一支封好的试管：“交给蓝衣巡查员。他会在兔舍外等你。不要打开。”"
+            }
+          ]
+        },
+        {
+          "id": "sample_exit",
+          "title": "sample_exit",
+          "actions": [
+            {
+              "property": "chapter",
+              "value": "meadow"
+            }
+          ]
+        },
+        {
+          "id": "walk",
+          "title": "沿蓝色箭头出发",
+          "actions": [
+            {
+              "function": {
+                "name": "remember_route",
+                "args": {
+                  "route": "walk"
+                }
+              }
+            },
+            {
+              "property": "dialogue",
+              "value": "你收好地图，沿着路边整齐的蓝色箭头走去。"
+            }
+          ]
+        },
+        {
+          "id": "walk_exit",
+          "title": "walk_exit",
+          "actions": [
+            {
+              "property": "chapter",
+              "value": "meadow"
+            }
+          ]
+        },
+        {
+          "id": "END",
+          "title": "END",
+          "actions": []
+        }
+      ],
+      "description": "领取地图与守则，决定是否帮助兽医。"
+    },
+    {
+      "id": "meadow",
+      "title": "第二章 · 温顺的动物",
+      "subtitle": "10:15  /  草食动物区",
+      "background": null,
+      "achievements": [
+        {
+          "id": "helper",
+          "title": "交接完成",
+          "description": "在草食动物区将样本交给巡查员。"
+        }
+      ],
+      "contents": [
+        {
+          "id": "START",
+          "title": "兔舍旁的巡查员",
+          "actions": [
+            {
+              "property": "dialogue",
+              "value": "阳光落在修剪整齐的草坪上。一只兔子低头吃草，耳朵之间似乎多了一截影子。\n蓝衣巡查员靠在路牌旁，等着你开口。"
+            },
+            {
+              "property": "rules",
+              "value": {
+                "book_id": "patrol",
+                "title": "巡查补充说明",
+                "entries": [
+                  {
+                    "id": "1",
+                    "text": "听到广播报出“有角兔区”时，请勿跟随绿色箭头。"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "choice",
+          "title": "广播中的动物",
+          "actions": [
+            {
+              "property": "dialogue",
+              "value": "广播响起：“请前往有角兔区的游客沿绿色箭头……”\n巡查员看向你的背包。你现在要去哪里？"
+            },
+            {
+              "property": "decision",
+              "value": [
+                {
+                  "text": "按地图沿蓝色步道离园",
+                  "next_id": "safe",
+                  "when": {
+                    "map_reads": 1
+                  }
+                },
+                {
+                  "text": "请巡查员带路",
+                  "next_id": "safe",
+                  "when": {
+                    "escorted": true
+                  }
+                },
+                {
+                  "text": "跟随广播的绿色箭头",
+                  "next_id": "strange"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "蓝色步道",
+          "actions": [
+            {
+              "function": {
+                "name": "set_safe",
+                "args": {
+                  "value": true
+                }
+              }
+            },
+            {
+              "property": "dialogue",
+              "value": "你走上蓝色步道。隔着树篱，广播又响了一次，报出的却是你的名字。你没有回头。"
+            }
+          ]
+        },
+        {
+          "id": "safe_exit",
+          "title": "safe_exit",
+          "actions": [
+            {
+              "property": "chapter",
+              "value": "departure"
+            }
+          ]
+        },
+        {
+          "id": "strange",
+          "title": "绿色通道",
+          "actions": [
+            {
+              "function": {
+                "name": "set_safe",
+                "args": {
+                  "value": false
+                }
+              }
+            },
+            {
+              "property": "dialogue",
+              "value": "绿色箭头尽头是一扇崭新的门。门后的售票员笑着对你说：“欢迎入园。”"
+            }
+          ]
+        },
+        {
+          "id": "strange_exit",
+          "title": "strange_exit",
+          "actions": [
+            {
+              "property": "chapter",
+              "value": "return"
+            }
+          ]
+        },
+        {
+          "id": "END",
+          "title": "END",
+          "actions": []
+        }
+      ],
+      "description": "广播指向两条路。你相信地图，还是声音？"
+    },
+    {
+      "id": "departure",
+      "title": "结局 · 平安离园",
+      "subtitle": "闭园之前  /  最后一份记录",
+      "background": null,
+      "contents": [
+        {
+          "id": "START",
+          "title": "最后一道闸机",
+          "actions": [
+            {
+              "property": "dialogue",
+              "value": "出口就在眼前。你把门票对准闸机。"
+            }
+          ]
+        },
+        {
+          "id": "result",
+          "title": "门票上的日期",
+          "actions": [
+            {
+              "property": "dialogue",
+              "value": "闸机亮起绿灯。街道上的车流声涌进来，地图上的蓝线终于到此为止。\n你离开了动物园。今天的游园记录，结束。"
+            },
+            {
+              "property": "achievement",
+              "options": "complete",
+              "value": "home"
+            }
+          ]
+        },
+        {
+          "id": "END",
+          "title": "END",
+          "actions": []
+        }
+      ],
+      "description": "沿蓝色步道走出园区，结束今天的游览。",
+      "ending": "normal"
+    },
+    {
+      "id": "return",
+      "title": "结局 · 今日再次开放",
+      "subtitle": "闭园之前  /  最后一份记录",
+      "background": null,
+      "contents": [
+        {
+          "id": "START",
+          "title": "最后一道闸机",
+          "actions": [
+            {
+              "property": "dialogue",
+              "value": "出口就在眼前。你把门票对准闸机。"
+            }
+          ]
+        },
+        {
+          "id": "result",
+          "title": "门票上的日期",
+          "actions": [
+            {
+              "property": "achievement",
+              "options": "register",
+              "value": {
+                "id": "loop",
+                "title": "今日再次开放",
+                "description": "发现另一扇入口。"
+              }
+            },
+            {
+              "property": "achievement",
+              "options": "complete",
+              "value": "loop"
+            },
+            {
+              "property": "dialogue",
+              "value": "<red>闸机上的日期还是今天。</red>\n你走出去，却站回了售票机前。机器吐出一张温热的门票。\n这条故事线到此结束。可以从设定中的剧情图回到先前的分岔。"
+            }
+          ]
+        },
+        {
+          "id": "END",
+          "title": "END",
+          "actions": []
+        }
+      ],
+      "description": "绿色通道的尽头，是一张新的门票。",
+      "ending": "normal"
+    }
+  ]
+}

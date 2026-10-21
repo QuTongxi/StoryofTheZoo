@@ -1,0 +1,13 @@
+[project]
+name = "story-of-the-zoo"
+version = "1.0.0"
+description = "A Chinese anime romance-horror visual novel with shared GUI and CLI"
+requires-python = ">=3.11"
+dependencies = ["pygame-ce>=2.5.5,<3"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

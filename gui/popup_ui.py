@@ -8,7 +8,7 @@ PANEL = pygame.Rect(220, 180, 840, 440)
 
 def prepare(app):
     app.popup_index = 0
-    message = app.engine.popup if app.engine else None
+    message = app.menu_popup or (app.engine.popup if app.engine else None)
     app.popup_chunks = text_pages(message['text'], app.body_font, 752, lines_per_page=6) if message else []
 
 
@@ -16,12 +16,15 @@ def confirm(app):
     if app.popup_index + 1 < len(app.popup_chunks):
         app.popup_index += 1
         return
+    if app.menu_popup:
+        app.menu_popup = None
+        return
     app.session.apply('advance')
     app.sync_page()
 
 
 def draw_popup(app):
-    message = app.engine.popup
+    message = app.menu_popup or app.engine.popup
     shade = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
     shade.fill((12, 30, 24, 175))
     app.canvas.blit(shade, (0, 0))

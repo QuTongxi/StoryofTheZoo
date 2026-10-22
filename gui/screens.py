@@ -1,7 +1,7 @@
 """Title, chapter cards, visited story graph, and achievement collection."""
 import pygame
 from .style import backdrop, icon, INK, GREEN, MUTED, PAPER, LINE, RED
-from .ui import WIDTH, HEIGHT, label, fitted_label, wrap_text
+from .ui import WIDTH, HEIGHT, Button, label, fitted_label, wrap_text
 
 
 def background(app, path=None, variant=0):
@@ -13,19 +13,54 @@ def background(app, path=None, variant=0):
 
 def draw_title(app):
     background(app, app.story.title.get('background'))
-    app.paper_panel((70, 70, 550, 660))
-    label(app.canvas, app.micro_font, 'MUNICIPAL ZOO  /  VISITOR RECORD', (110, 104), MUTED)
-    pygame.draw.line(app.canvas, GREEN, (110, 151), (178, 151), 3)
-    fitted_label(app.canvas, app.title_font, app.story.name, pygame.Rect(110, 178, 470, 80), GREEN)
-    for i, line in enumerate(wrap_text(app.story.title.get('subtitle', '欢迎来到动物园。祝您游园愉快。'), app.small_font, 440)[:3]):
-        label(app.canvas, app.small_font, line, (112, 269 + i * 30), MUTED)
-    options = [('开始游园', 'new_game')]
-    if app.session.engine:
-        options.append(('继续上次游园', 'continue_game'))
-    options.extend([('调阅存档', 'load'), ('设定', 'settings'), ('离开', 'quit')])
+
+    def floating_text(font, text, pos, color, max_width):
+        lettering = font.render(text, True, color)
+        shadow = font.render(text, True, (15, 27, 31))
+        if lettering.get_width() > max_width:
+            size = (max_width, round(lettering.get_height() * max_width / lettering.get_width()))
+            lettering = pygame.transform.smoothscale(lettering, size)
+            shadow = pygame.transform.smoothscale(shadow, size)
+        shadow.set_alpha(180)
+        x, y = pos
+        for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1), (2, 3)):
+            app.canvas.blit(shadow, (x + dx, y + dy))
+        app.canvas.blit(lettering, pos)
+
+    floating_text(app.logo_font, app.library.title if app.library else app.story.name,
+                  (96, 164), (255, 249, 235), 450)
+    options = [('新游戏', 'new_game'), ('载入存档', 'load'), ('设置', 'settings'), ('退出游戏', 'quit')]
     for i, (title, action) in enumerate(options):
-        app.add_button((112, 380 + i * 57, 420, 44), title, action)
-    label(app.canvas, app.micro_font, 'STORY OF THE ZOO', (900, 715), (235,240,232))
+        rect = pygame.Rect(102, 370 + i * 68, 270, 54)
+        app.buttons.append(Button(rect, title, action))
+        hover = rect.collidepoint(app.logical_position(pygame.mouse.get_pos()))
+        color = (255, 222, 156) if hover else (255, 249, 235)
+        x = rect.x + (22 if hover else 12)
+        floating_text(app.menu_font, title, (x, rect.y + 8), color, 240)
+        if hover:
+            pygame.draw.line(app.canvas, color, (rect.x, rect.centery), (rect.x + 9, rect.centery), 2)
+
+
+def draw_stories(app):
+    background(app, 'art/covers/opening.png')
+    app.paper_panel((64, 55, 1152, 690))
+    label(app.canvas, app.title_font, '选择故事', (100, 83), GREEN)
+    label(app.canvas, app.small_font, '两份独立的记录。请从今天的约会开始。', (102, 137), MUTED)
+    for i, (key, entry) in enumerate(app.library.entries.items()):
+        x = 102 + i * 552
+        picture = app.scaled(entry['cover'], (514, 290))
+        app.canvas.blit(picture, (x + (514-picture.get_width())//2, 204))
+        unlocked = app.library.unlocked(key)
+        if not unlocked:
+            shade = pygame.Surface((514, 290), pygame.SRCALPHA)
+            shade.fill((10, 20, 28, 165))
+            app.canvas.blit(shade, (x, 204))
+            label(app.canvas, app.title_font, '未解锁', (x+200, 320), PAPER)
+        label(app.canvas, app.small_font, entry['name'], (x, 510), GREEN)
+        for n, line in enumerate(wrap_text(entry['description'] if unlocked else '完成游客线的海洋馆之夜后解锁。', app.small_font, 500)):
+            label(app.canvas, app.small_font, line, (x, 548+n*28), MUTED)
+        app.add_button((x, 610, 514, 52), '开始故事' if unlocked else '未解锁 · 查看条件', 'select_story', key)
+    app.add_button((984, 82, 190, 48), '返回标题', 'to_title')
 
 
 def draw_chapter(app):

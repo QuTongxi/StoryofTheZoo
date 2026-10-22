@@ -40,6 +40,8 @@ class SceneExporter:
         if key not in self.cache:
             try:
                 image = self.pygame.image.load(str(self.story.asset(asset)))
+                # Match GUI's 32-bit alpha resampling without initializing a display.
+                image = self.pygame.image.frombytes(self.pygame.image.tobytes(image, 'RGBA'), image.get_size(), 'RGBA')
                 ratios = box[0] / image.get_width(), box[1] / image.get_height()
                 ratio = max(ratios) if cover else min(ratios)
                 size = tuple(max(1, round(n * ratio)) for n in image.get_size())
@@ -49,13 +51,14 @@ class SceneExporter:
         return self.cache[key]
 
     def surfaces(self, visual):
+        illustrated = visual.get('visual_mode') == 'illustration'
         background = self.pygame.Surface((WIDTH, HEIGHT))
-        background.fill((25, 45, 40))
+        background.fill((12, 20, 18) if illustrated else (25, 45, 40))
         if visual['background']:
-            image = self.scaled(visual['background'], (WIDTH, HEIGHT), cover=True)
+            image = self.scaled(visual['background'], (WIDTH, HEIGHT), cover=not illustrated)
             background.blit(image, ((WIDTH - image.get_width()) // 2, (HEIGHT - image.get_height()) // 2))
         scene = background.copy()
-        for slot, asset in visual['characters'].items():
+        for slot, asset in ({} if illustrated else visual['characters']).items():
             image = self.scaled(asset, (500, 760))
             center = {'left': 270, 'center': 640, 'right': 1010}[slot]
             scene.blit(image, (center - image.get_width() // 2, 840 - image.get_height()))
@@ -87,6 +90,7 @@ class SceneExporter:
                           'sounds': [str(self.story.asset(path)) for path in audio['sounds']]},
                 'background_image': str(bg_path), 'scene_image': str(scene_path),
                 'has_background': visual['background'] is not None,
+                'visual_mode': visual.get('visual_mode', 'background'),
             })
             last = background, scene
         if last is None:

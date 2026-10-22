@@ -8,7 +8,7 @@ from .richtext import parse_rich
 
 
 class Engine:
-    SAVE_VERSION = 5
+    SAVE_VERSION = 6
     MAX_ACTIONS = 100_000
     MAX_BATCH = 1000
 
@@ -16,7 +16,7 @@ class Engine:
         self.story = story
         self.state = {'chapter_id': story.initial_chapter, 'chapter_pending': True,
                       'page_id': 'START', 'variables': deepcopy(story.variables),
-                      'background': None, 'characters': {}, 'music': None, 'ended': False,
+                      'background': None, 'visual_mode': 'background', 'characters': {}, 'music': None, 'ended': False,
                       'rulebooks': {}, 'bookmarks': [], 'inventory': {}, 'achievements': {}}
         self.history, self.actions, self.calls, self.observations = [], [], [], []
         self._cached_calls = receipts
@@ -74,7 +74,8 @@ class Engine:
     def _enter_chapter(self, chapter_id):
         chapter = self.story.chapter(chapter_id)
         self.state.update(chapter_id=chapter_id, chapter_pending=True, page_id='START',
-                          background=chapter.get('background'), characters={}, music=None, ended=False)
+                          background=chapter.get('background'), visual_mode=chapter.get('visual_mode', 'background'),
+                          characters={}, music=None, ended=False)
         self._resume = []
         self._blank()
         for definition in chapter.get('achievements', []):
@@ -100,7 +101,8 @@ class Engine:
                               'voice': None if self.state['ended'] else self.page.get('voice'),
                               'sound': None if self.state['ended'] else self.page.get('sound')}}
                    if self.state['music'] or 'voice' in self.page or 'sound' in self.page else {}),
-                'visual': deepcopy({'background': self.state['background'], 'characters': self.state['characters']})}
+                'visual': deepcopy({'background': self.state['background'], 'visual_mode': self.state['visual_mode'],
+                                    'characters': self.state['characters'] if self.state['visual_mode'] == 'background' else {}})}
 
     def _finish(self):
         if 'choices' in self.page and not self.choices and not self.state['ended'] and not self.popup:
@@ -193,17 +195,22 @@ class Engine:
                 self._page['speaker'] = a.get('speaker', '')
                 self._page.setdefault('text_spans', []).extend(
                     {'start': start + offset, 'end': end + offset, 'color': color} for start, end, color in spans)
-            elif p in ('background', 'character'):
+            elif p in ('background', 'illustration', 'character'):
                 value = None if a.get('options') == 'hide' else a.get('value')
-                slot = a.get('slot', 'center')
-                if p == 'background':
+                slot = a.get('slot', 'left')
+                if p in ('background', 'illustration'):
+                    # CG is a complete composition, never a sprite backdrop.
+                    # Do not let stale portraits reappear when returning to scenery.
+                    if p == 'illustration' or self.state['visual_mode'] == 'illustration':
+                        self.state['characters'].clear()
                     self.state['background'] = value
+                    self.state['visual_mode'] = 'illustration' if p == 'illustration' and value else 'background'
                 elif value is None:
                     self.state['characters'].pop(slot, None)
-                else:
+                elif self.state['visual_mode'] == 'background':
                     self.state['characters'][slot] = value
                 if a.get('options') in ('fade in', 'zoom in'):
-                    self._page.setdefault('animations', []).append({'property': p, 'slot': slot,
+                    self._page.setdefault('animations', []).append({'property': 'background' if p == 'illustration' else p, 'slot': slot,
                         'type': a['options'], 'duration': duration(a.get('args', 0.6))})
             elif p in ('music', 'voice', 'sound'):
                 value = None if a.get('options') == 'stop' else a.get('value')

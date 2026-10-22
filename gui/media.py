@@ -97,13 +97,20 @@ class Media:
                 raise StoryError(f"语音播放失败：{exc}") from exc
 
 
-def find_font(root: Path, configured: str | None):
+def find_font(root: Path, configured: str | None, role='body'):
     if configured:
         path = (root / configured).resolve()
         if not path.is_relative_to(root.resolve()) or not path.is_file():
             raise StoryError(f"字体文件不存在或路径越界：{configured}")
         return str(path)
-    # pygame's bundled font lacks CJK; prefer installed Chinese fonts.
+    bundled = {'body': 'LXGWWenKai-Regular.ttf', 'ui': 'GlowSansSC-Normal-Regular.otf',
+               'title': 'SourceHanSerifSC-Medium.otf'}
+    if role not in bundled:
+        raise StoryError(f'未知字体用途：{role}')
+    path = root / 'fonts' / bundled[role]
+    if path.is_file():
+        return str(path)
+    # Custom stories without bundled fonts can still use installed CJK fonts.
     for family in ("notosanscjksc", "notosanscjk", "microsoftyahei", "pingfangsc",
                    "wenquanyizenhei", "droidsansfallback"):
         path = pygame.font.match_font(family)

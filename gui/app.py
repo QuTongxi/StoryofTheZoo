@@ -18,20 +18,28 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class App:
-    def __init__(self, story, save_dir, *, muted=False, font=None, text_speed=36):
+    def __init__(self, story, save_dir, *, muted=False, font=None, text_speed=36, library=None):
         pygame.display.init()
         pygame.font.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
         pygame.display.set_caption(story.name)
+        self.library = library
+        self.story_id = 'visitor'
+        self.load_story_id = self.story_id
+        self.menu_popup = None
         self.story = story
         self.canvas = pygame.Surface((WIDTH, HEIGHT))
-        font_path = find_font(story.root, font)
-        self.body_font = pygame.font.Font(font_path, 25)
-        self.display_font = pygame.font.Font(font_path, 32)
-        self.small_font = pygame.font.Font(font_path, 19)
-        self.title_font = pygame.font.Font(font_path, 34)
-        self.micro_font = pygame.font.Font(font_path, 14)
-        self.session = Session(story, Path(save_dir) / "session.json")
+        body_path = find_font(story.root, font, 'body')
+        ui_path = find_font(story.root, font, 'ui')
+        title_path = find_font(story.root, font, 'title')
+        self.body_font = pygame.font.Font(body_path, 28)
+        self.display_font = pygame.font.Font(ui_path, 32)
+        self.small_font = pygame.font.Font(ui_path, 19)
+        self.title_font = pygame.font.Font(title_path, 34)
+        self.logo_font = pygame.font.Font(title_path, 58)
+        self.menu_font = pygame.font.Font(ui_path, 27)
+        self.micro_font = pygame.font.Font(ui_path, 14)
+        self.session = library.session(self.story_id) if library else Session(story, Path(save_dir) / "session.json")
         self.engine = self.session.engine
         self.scene = "title"
         self.graph_selected = None
@@ -41,10 +49,11 @@ class App:
         self.graph_drag = None
         self.panel_page = 0
         self.media = Media(story, muted=muted)
-        self.store = SaveStore(save_dir)
+        self.store = SaveStore(library.session_dir(self.story_id) if library else save_dir)
         self.text_speed = text_speed
         self.running = True
         self.overlay = None
+        self.ui_hidden = False
         self.scroll = 0
         self.history_max_scroll = 0
         self.rule_active_book = None
@@ -72,7 +81,13 @@ class App:
             self.media.sync({'ended': False, 'music': 'audio/unease.mp3'}, {}, transient=False)
 
     def sync_page(self, *, transient=True, restored=False):
+        self.ui_hidden = False
         self.engine = self.session.engine
+        if self.library:
+            before = self.library.unlocked('employee')
+            self.library.record(self.story_id, self.session)
+            if not before and self.library.unlocked('employee'):
+                self.announce('员工线已解锁 · 可在新游戏中选择')
         self.scene = "chapter" if self.engine.state["chapter_pending"] else "game"
         from .popup_ui import prepare
         prepare(self)
@@ -121,7 +136,7 @@ class App:
             from .popup_ui import confirm
             confirm(self)
             return
-        if self.scene == "title":
+        if self.scene in ('title', 'stories'):
             return
         if self.scene == "chapter":
             self.session.apply("advance")
@@ -145,11 +160,41 @@ class App:
 
     def action(self, name, value=None):
         try:
+            if self.menu_popup and name != 'popup_continue':
+                return
             if name not in ('advance', 'popup_continue'):
                 self.media.click()
             if name == 'popup_continue':
-                if self.engine and self.engine.popup:
+                if self.menu_popup:
+                    from .popup_ui import confirm
+                    confirm(self)
+                elif self.engine and self.engine.popup:
                     self.advance()
+            elif name == 'new_game' and self.library:
+                self.scene, self.overlay = 'stories', None
+            elif name == 'select_story':
+                if not self.check_story(value):
+                    return
+                session = self.library.session(value)
+                session.start()
+                self.activate_story(value, session)
+                self.overlay = None
+                self.sync_page()
+            elif name == 'load_story_tab':
+                if self.check_story(value):
+                    self.load_story_id = value
+            elif name == 'load_auto':
+                if self.library:
+                    if not self.check_story(self.load_story_id):
+                        return
+                    session = self.library.session(self.load_story_id)
+                    if not session.engine:
+                        raise StoryError('这条故事还没有自动存档')
+                    self.activate_story(self.load_story_id, session)
+                if not self.session.engine:
+                    raise StoryError('还没有自动存档')
+                self.overlay = None
+                self.sync_page(transient=False, restored=True)
             elif name in ('new_game', 'confirm_restart'):
                 self.session.start()
                 self.overlay = None
@@ -199,6 +244,8 @@ class App:
                 self.choose(value)
             elif name in ("history", "save", "load", 'help'):
                 self.overlay = name
+                if name == 'load':
+                    self.load_story_id = self.story_id
                 self.scroll = 0
             elif name in ('settings', 'inventory'):
                 self.overlay = None if self.overlay == name else name
@@ -225,9 +272,20 @@ class App:
                 self.overlay = None
                 self.announce(f"已保存到存档 {value}")
             elif name == "load_slot":
-                candidate = Engine(self.story, initialize=False)
-                self.store.load(candidate, value)
-                self.session.import_snapshot(candidate.export())
+                # A failed read must not replace the currently playing story.
+                key = self.load_story_id if self.overlay == 'load' else self.story_id
+                if self.library:
+                    if not self.check_story(key):
+                        return
+                    session = self.library.session(key)
+                    candidate = Engine(self.library.stories[key], initialize=False)
+                    SaveStore(self.library.session_dir(key)).load(candidate, value)
+                    session.import_snapshot(candidate.export())
+                    self.activate_story(key, session)
+                else:
+                    candidate = Engine(self.story, initialize=False)
+                    self.store.load(candidate, value)
+                    self.session.import_snapshot(candidate.export())
                 self.overlay = None
                 self.sync_page(transient=False, restored=True)
                 self.announce(f"已读取存档 {value}")
@@ -245,6 +303,26 @@ class App:
         except (StoryError, OSError) as exc:
             self.announce(str(exc))
 
+    def check_story(self, key):
+        if self.library.unlocked(key):
+            return True
+        self.menu_popup = self.library.popup(key)
+        from .popup_ui import prepare
+        prepare(self)
+        return False
+
+    def activate_story(self, key, session):
+        self.story_id = self.load_story_id = key
+        self.story, self.session, self.engine = session.story, session, session.engine
+        self.store = SaveStore(self.library.session_dir(key))
+        self.media.story = self.story
+        self.scaled_images.clear()
+        self.graph_selected = self.gallery_selected = self.rule_active_book = None
+        self.graph_fit = True
+        self.panel_page = self.rule_scroll = self.rule_tab_offset = 0
+        self.inventory_selected = None
+        self.inventory_page = self.inventory_scroll = 0
+
     def logical_position(self, pos):
         if not self.viewport.collidepoint(pos):
             return (-1, -1)
@@ -254,7 +332,12 @@ class App:
     def handle_event(self, event):
         if event.type == pygame.QUIT:
             self.running = False
-        elif self.scene == 'game' and self.engine and self.engine.popup:
+        elif self.ui_hidden:
+            # The first input only restores UI, never advances or chooses blindly.
+            if event.type in (pygame.KEYDOWN, pygame.MOUSEBUTTONDOWN):
+                self.ui_hidden = False
+            return
+        elif self.menu_popup or (self.scene == 'game' and self.engine and self.engine.popup):
             if event.type == pygame.KEYDOWN and event.key in (pygame.K_SPACE, pygame.K_RETURN):
                 self.action('popup_continue')
             elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
@@ -263,9 +346,15 @@ class App:
                     self.action('popup_continue')
             return
         elif event.type == pygame.KEYDOWN:
-            if self.scene == 'title':
+            if event.key == pygame.K_TAB and self.scene == 'game' and not self.overlay:
+                self.ui_hidden = True
+                return
+            if self.scene in ('title', 'stories'):
                 if event.key == pygame.K_ESCAPE:
-                    self.overlay = None if self.overlay else 'settings'
+                    if self.scene == 'stories' and not self.overlay:
+                        self.action('to_title')
+                    else:
+                        self.overlay = None if self.overlay else 'settings'
                 return
             if self.scene == 'chapter' and not self.overlay and event.key in (pygame.K_SPACE, pygame.K_RETURN):
                 self.action('chapter_continue')
@@ -331,7 +420,7 @@ class App:
             self.graph_drag = pos
         elif event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 3:
-                self.overlay = None if self.overlay else ("settings" if self.scene == "title" else "history")
+                self.overlay = None if self.overlay else ("settings" if self.scene in ('title', 'stories') else "history")
             elif event.button == 1:
                 pos = self.logical_position(event.pos)
                 for button in self.buttons:
@@ -347,7 +436,7 @@ class App:
                         self.action("advance")
 
     def update(self, seconds):
-        if self.scene == "game" and not self.overlay and not self.engine.popup:
+        if self.scene == "game" and not self.overlay and not self.engine.popup and not self.ui_hidden:
             self.effect_time += seconds
             if not self.blocked:
                 old_revealed = int(self.revealed)
@@ -437,11 +526,14 @@ class App:
     def draw_scene(self):
         backdrop(self.canvas, self.story.chapters.index(self.engine.chapter))
         background = self.engine.state["background"]
+        illustrated = self.engine.state.get('visual_mode') == 'illustration'
+        if illustrated:
+            self.canvas.fill((12, 20, 18))
         if background:
-            surface = self.scaled(background, (WIDTH, HEIGHT), cover=True)
+            surface = self.scaled(background, (WIDTH, HEIGHT), cover=not illustrated)
             surface = self.animated(surface, 'background')
             self.canvas.blit(surface, ((WIDTH - surface.get_width()) // 2, (HEIGHT - surface.get_height()) // 2))
-        for slot, path in self.engine.state["characters"].items():
+        for slot, path in ({} if illustrated else self.engine.state["characters"]).items():
             surface = self.scaled(path, (500, 760))
             surface = self.animated(surface, 'character', slot)
             center = {"left": 270, "center": 640, "right": 1010}[slot]
@@ -463,7 +555,9 @@ class App:
                     self.canvas.blit(overlay, (0, 0))
 
     def draw_dialogue(self):
-        dark = any(part in (self.engine.state.get('background') or '') for part in ('night','dark','whale','storage','controlroom','confession','endings/B'))
+        dark = any(part in (self.engine.state.get('background') or '') for part in (
+            'night','dark','whale','storage','controlroom','confession','endings/B',
+            'rain_entry','black_corridor','room_check','red_handover','entrance_defense'))
         ink = (224,232,235) if dark else INK
         accent = (140,203,213) if dark else GREEN
         muted = (153,171,179) if dark else FADED
@@ -475,15 +569,19 @@ class App:
         for i, (text, action) in enumerate((('设定', 'settings'), ('背包 B', 'inventory'), ('守则 R', 'rules'))):
             self.add_button((900 + i * 114, 15, 104, 35), text, action)
         # A small paper location tab, leaving most of the environment unobstructed.
-        for rect in ((32,91,258,83),(40,554,1200,218)):
+        # Keep the default left portrait's face unobstructed. CGs need no tab.
+        illustrated = self.engine.state.get('visual_mode') == 'illustration'
+        panels = [(40,554,1200,218)] if illustrated else [(990,91,258,83),(40,554,1200,218)]
+        for rect in panels:
             if dark:
                 panel=pygame.Surface((rect[2],rect[3]),pygame.SRCALPHA)
                 panel.fill((12,21,31,228));self.canvas.blit(panel,rect[:2])
                 pygame.draw.rect(self.canvas,line,rect,1)
             else:
                 self.paper_panel(rect)
-        label(self.canvas, self.micro_font, '游 园 记 录    /    FIELD NOTES', (49, 103), muted)
-        fitted_label(self.canvas, self.small_font, self.engine.chapter['title'], pygame.Rect(49, 126, 224, 36), accent)
+        if not illustrated:
+            label(self.canvas, self.micro_font, '游 园 记 录    /    FIELD NOTES', (1007, 103), muted)
+            fitted_label(self.canvas, self.small_font, self.engine.chapter['title'], pygame.Rect(1007, 126, 224, 36), accent)
         pygame.draw.rect(self.canvas, accent, (40, 554, 6, 218))
         label(self.canvas, self.small_font, self.engine.page.get('speaker', '') or '游园记录', (76, 569), accent)
         page_number = self.story.node_indexes[self.engine.state['chapter_id']][self.engine.state['page_id']] + 1
@@ -504,7 +602,7 @@ class App:
             hint += f'  ·  {self.chunk_index + 1}/{len(self.chunks)}'
         for x in range(76, 1200, 12):
             pygame.draw.line(self.canvas, line, (x, 731), (x + 5, 731))
-        label(self.canvas, self.micro_font, hint, (76, 744), muted)
+        label(self.canvas, self.micro_font, hint + ' · Tab 查看完整画面', (76, 744), muted)
         label(self.canvas, self.micro_font, '请记住，你是人类。', (1060, 744), RED)
         if self.all_text_read and not self.blocked:
             choices = self.engine.choices
@@ -539,15 +637,26 @@ class App:
             from .rules_ui import draw_rules
             draw_rules(self)
         elif self.overlay in ('save', 'load'):
-            label(self.canvas, self.small_font, '共三份留存记录 · 点击已有存档将覆盖该槽位' if self.overlay == 'save'
-                  else '选择一份记录，回到上次停下的地方', (175, 200), FADED)
+            reading = self.overlay == 'load'
+            store = SaveStore(self.library.session_dir(self.load_story_id)) if reading and self.library else self.store
+            if reading and self.library:
+                for i, (key, entry) in enumerate(self.library.entries.items()):
+                    text = ('● ' if key == self.load_story_id else '') + entry['name']
+                    if not self.library.unlocked(key):
+                        text += ' · 未解锁'
+                    self.add_button((180+i*470, 195, 450, 42), text, 'load_story_tab', key)
+            else:
+                label(self.canvas, self.small_font, '共三份留存记录 · 点击已有存档将覆盖该槽位' if not reading
+                      else '选择一份记录，回到上次停下的地方', (175, 200), FADED)
             for slot in range(1, 4):
                 y = 248 + (slot - 1) * 116
                 self.add_button((180, y, 920, 82),
-                                f'记录 {slot:02}     /     {self.store.description(slot)}', f'{self.overlay}_slot', slot)
+                                f'记录 {slot:02}     /     {store.description(slot)}', f'{self.overlay}_slot', slot)
                 pygame.draw.line(self.canvas, LINE, (180, y + 95), (1100, y + 95), 1)
             if self.overlay == 'load':
-                self.add_button((780, 620, 320, 48), '章节自动存档', 'checkpoints')
+                self.add_button((180, 608, 410, 42), '继续这条故事的自动存档', 'load_auto')
+                if not self.library or self.load_story_id == self.story_id:
+                    self.add_button((620, 608, 480, 42), '查看当前故事已到达的节点', 'checkpoints')
             label(self.canvas, self.micro_font, 'F5 / F9 快速存读第一份记录', (180, 656), FADED)
         elif self.overlay == 'history':
             rect = pygame.Rect(175, 204, 925, 438)
@@ -576,7 +685,7 @@ class App:
         elif self.overlay == 'help':
             for i, text in enumerate(('左键 / 空格 / 回车：显示全文或继续', '数字键 1—6：选择行动',
                                       'H / 右键：游园记录；滚轮：翻阅', 'S / L：存档与读档；F5 / F9：快速存读',
-                                      'Backspace：回退；V：重听本页语音', 'B：背包；R：守则；Esc：设定 / 关闭菜单')):
+                                      'Backspace：回退；V：重听语音；Tab：赏图', 'B：背包；R：守则；Esc：设定 / 关闭菜单')):
                 label(self.canvas, self.body_font, text, (180, 220 + i * 62), INK)
 
     def render(self):
@@ -584,21 +693,25 @@ class App:
         if self.scene == 'title':
             from .screens import draw_title
             draw_title(self)
+        elif self.scene == 'stories':
+            from .screens import draw_stories
+            draw_stories(self)
         elif self.scene == 'chapter':
             from .screens import draw_chapter
             draw_chapter(self)
         else:
             self.draw_scene()
-            self.draw_dialogue()
+            if not self.ui_hidden:
+                self.draw_dialogue()
         if self.overlay:
             self.draw_overlay()
-        if self.notice_time > 0 and not (self.scene == 'game' and self.engine.popup):
+        if self.notice_time > 0 and not self.ui_hidden and not (self.scene == 'game' and self.engine.popup):
             notice_lines = wrap_text(self.notice, self.small_font, 1000)
             height = 24 + 28 * len(notice_lines)
             pygame.draw.rect(self.canvas, (42, 53, 42), (110, 70, 1060, height), border_radius=8)
             for i, line in enumerate(notice_lines):
                 label(self.canvas, self.small_font, line, (135, 80 + i * 28), ACCENT)
-        if self.scene == 'game' and self.engine.popup:
+        if self.menu_popup or (self.scene == 'game' and self.engine.popup):
             from .popup_ui import draw_popup
             draw_popup(self)
         width, height = self.screen.get_size()
@@ -636,9 +749,9 @@ class App:
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description='动物园文字游戏')
-    parser.add_argument('--story', type=Path, default=ROOT / 'data/story.json')
+    parser.add_argument('--story', type=Path, help='独立故事 JSON；默认进入正式游戏的故事选择界面')
     parser.add_argument('--save-dir', type=Path, default=ROOT / 'saves/gui')
-    parser.add_argument('--font', help='相对剧情目录的字体文件；默认使用系统中文字体')
+    parser.add_argument('--font', help='相对剧情目录的字体文件，覆盖全部字体；默认使用项目内置字体')
     parser.add_argument('--text-speed', type=int, default=36, help='每秒显示字符数，1—300')
     parser.add_argument('--mute', action='store_true')
     parser.add_argument('--check', action='store_true', help='校验剧情和素材路径')
@@ -656,11 +769,14 @@ def main(argv=None):
         os.environ['SDL_VIDEODRIVER'] = 'dummy'
         os.environ['SDL_AUDIODRIVER'] = 'dummy'
     try:
-        story = Story.load(args.story)
+        from core.library import Library, production_key
+        library = Library(args.save_dir) if args.story is None or production_key(args.story) else None
+        story = library.stories['visitor'] if library else Story.load(args.story)
         if args.check:
-            print(f'剧情校验通过：{len(story.chapters)} 章，{sum(len(c["contents"]) for c in story.chapters)} 个节点')
+            for checked in library.stories.values() if library else [story]:
+                print(f'{checked.name}：剧情校验通过，{len(checked.chapters)} 章，{sum(len(c["contents"]) for c in checked.chapters)} 个节点')
             return 0
-        app = App(story, args.save_dir, muted=args.mute, font=args.font, text_speed=args.text_speed)
+        app = App(story, args.save_dir, muted=args.mute, font=args.font, text_speed=args.text_speed, library=library)
         app.run(args.frames, args.screenshot)
         return 0
     except (StoryError, pygame.error, OSError) as exc:

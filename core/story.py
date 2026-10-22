@@ -21,7 +21,7 @@ def matches(condition, variables):
                for k, v in condition.items())
 
 
-PROPERTIES = ('background', 'character', 'dialogue', 'music', 'voice',
+PROPERTIES = ('background', 'illustration', 'character', 'dialogue', 'music', 'voice',
               'sound', 'effect', 'decision', 'item', 'rules', 'function', 'jump', 'chapter', 'achievement', 'popup')
 
 
@@ -67,7 +67,9 @@ class Story:
         for chapter in self.chapters:
             if not isinstance(chapter, dict):
                 raise StoryError('章节必须是对象')
-            self._keys(chapter, {'id', 'title', 'subtitle', 'description', 'ending', 'background', 'contents', 'achievements'}, 'chapter')
+            self._keys(chapter, {'id', 'title', 'subtitle', 'description', 'ending', 'background', 'visual_mode', 'contents', 'achievements'}, 'chapter')
+            if chapter.get('visual_mode', 'background') not in ('background', 'illustration'):
+                raise StoryError('chapter.visual_mode 需要 background/illustration')
             if not all(isinstance(chapter.get(k), str) and chapter[k].strip() for k in ('id', 'title')):
                 raise StoryError('章节需要非空 id 和 title')
             chapter_id = chapter['id']
@@ -224,7 +226,7 @@ class Story:
                 self.function_spec(a['function'])
             if p == 'function' and 'function' not in a:
                 self.function_spec(a.get('value'))
-            if p in ('background', 'character'):
+            if p in ('background', 'illustration', 'character'):
                 option = a.get('options', 'show')
                 if option not in ('show', 'hide', 'fade in', 'zoom in'):
                     raise StoryError(f'{p} 不支持 options={option}')
@@ -232,7 +234,7 @@ class Story:
                     self.asset(a['value'])
                 if option in ('fade in', 'zoom in'):
                     duration(a.get('args', 0.6))
-                if p == 'character' and a.get('slot', 'center') not in ('left', 'center', 'right'):
+                if p == 'character' and a.get('slot', 'left') not in ('left', 'center', 'right'):
                     raise StoryError('character.slot 需要 left/center/right')
             elif p == 'popup':
                 if a.get('options', 'show') != 'show' or not isinstance(a.get('value'), str) or not isinstance(a.get('title', '提示'), str):

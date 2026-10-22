@@ -1,0 +1,46 @@
+{
+  "fonts": [
+    {
+      "name": "LXGWWenKai-Regular.ttf",
+      "family": "霞鹜文楷",
+      "role": "body",
+      "version": "v1.530",
+      "source": "https://github.com/lxgw/LxgwWenKai",
+      "url": "https://github.com/lxgw/LxgwWenKai/releases/download/v1.530/LXGWWenKai-Regular.ttf",
+      "license_url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/v1.530/OFL.txt",
+      "license_file": "LXGWWenKai-OFL.txt",
+      "sha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b",
+      "bytes": 25928940,
+      "license": "SIL Open Font License 1.1"
+    },
+    {
+      "name": "GlowSansSC-Normal-Regular.otf",
+      "family": "未来荧黑",
+      "role": "ui",
+      "version": "v0.93",
+      "source": "https://github.com/welai/glow-sans",
+      "url": "https://github.com/welai/glow-sans/releases/download/v0.93/GlowSansSC-Normal-v0.93.zip",
+      "license_url": "https://raw.githubusercontent.com/welai/glow-sans/v0.93/OFL.txt",
+      "license_file": "GlowSans-OFL.txt",
+      "archive_sha256": "aa2e1fdb20337113a1d2670b695bfee83910eefa2e48f51c704e5f4a9f8ec9f1",
+      "archive_member": "GlowSansSC-Normal-Regular.otf",
+      "sha256": "ca7d34947401b2fa6dd4fd46676d970a8cc47a40ee60c022eb7dd5068bee67ff",
+      "bytes": 9119372,
+      "license": "SIL Open Font License 1.1"
+    },
+    {
+      "name": "SourceHanSerifSC-Medium.otf",
+      "family": "思源宋体",
+      "role": "title",
+      "version": "2.003R",
+      "commit": "7889f11bf31170b5d092a083b357c8c8130f89e0",
+      "source": "https://github.com/adobe-fonts/source-han-serif",
+      "url": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/OTF/SimplifiedChinese/SourceHanSerifSC-Medium.otf",
+      "license_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/LICENSE.txt",
+      "license_file": "SourceHanSerif-LICENSE.txt",
+      "sha256": "1d4dc4b757c07034e2412d6edf48f54f94ec7172d4deb3b90a3e4fc9dcb94f5d",
+      "bytes": 24805580,
+      "license": "SIL Open Font License 1.1"
+    }
+  ]
+}

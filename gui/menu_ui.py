@@ -6,7 +6,7 @@ from .ui import label, wrap_text, fitted_label
 def draw_settings(app):
     ink, accent, muted = (34, 48, 41), (35, 66, 55), (109, 117, 102)
     label(app.canvas, app.small_font, '进度与游玩设置', (180, 202), muted)
-    if app.scene == 'title':
+    if app.scene in ('title', 'stories'):
         options = [('读取进度', 'load'), ('剧情图', 'flowchart'), ('游园成就', 'achievements'),
                    ('资料馆', 'archive'), ('回忆画廊', 'gallery'),
                    ('制作与素材', 'credits'), ('操作说明', 'help')]

@@ -4,13 +4,13 @@ from pathlib import Path
 import pytest
 from core import Story, Engine
 from core.session import Session
-from tools.check_routes import walk, CASES
+from tools.check_routes import walk, CASES, load_stories
 
 ROOT=Path(__file__).resolve().parents[1]
 
 @pytest.fixture(scope='module')
 def production():
-    return Story.load(ROOT/'data/story.json')
+    return load_stories()
 
 @pytest.mark.parametrize('ending',list(CASES))
 def test_every_ending_is_reachable_with_real_actions(production,ending):
@@ -23,13 +23,13 @@ def test_optional_notes_do_not_leak_and_collection_does_not_teach_actor(producti
     assert 'visitor_note' not in visitor.state['rulebooks']
     worker,*_=walk(production,'TE',{('E11','room_note'):1,('E14','guard_note'):1})
     assert 'room_note' not in worker.state['rulebooks'] and 'guard' not in worker.state['rulebooks']
-    session=Session(production,tmp_path/'session.json')
+    session=Session(production['visitor'],tmp_path/'session.json')
     session.import_snapshot(visitor.export())
     assert session.collection.data['endings']==['TV']
     session.start()
     assert not session.engine.rulebooks
     assert 'TV' in session.collection.data['endings']
-    loaded=Session(production,session.path)
+    loaded=Session(production['visitor'],session.path)
     assert loaded.collection.data==session.collection.data
     assert not loaded.engine.rulebooks
 
@@ -40,7 +40,7 @@ def test_blood_changes_picture_without_eating_and_toy_is_visibly_collected(produ
     assert engine.state['inventory']['goat_meat']==1
     assert not engine.state['inventory'].get('rabbit_toy')
     assert any('玩偶放进工作推车' in h['text'] for h in engine.history)
-    assert production.items['goat_meat'].icon!=production.items['rabbit_blood'].icon
+    assert production['visitor'].items['goat_meat'].icon!=production['visitor'].items['rabbit_blood'].icon
 
 def test_whole_documents_and_both_routes_collect_all_nine(production):
     visitor,*_=walk(production,'TV')
@@ -49,12 +49,12 @@ def test_whole_documents_and_both_routes_collect_all_nine(production):
     assert len(books)==9
     all_text='\n'.join(text for book in books.values() for text in book['entries'].values())
     assert '【隐藏文字' in all_text and '~~' in all_text and '**' in all_text
-    updates=[a['value'] for c in production.chapters for n in c['contents'] for a in n['actions'] if a.get('property')=='rules']
+    updates=[a['value'] for story in production.values() for c in story.chapters for n in c['contents'] for a in n['actions'] if a.get('property')=='rules']
     for update in updates:
         assert {e['id']:e['text'] for e in update['entries']}==books[update['book_id']]['entries']
 
 def test_wrong_ticket_can_be_corrected_before_leaving(production):
-    engine=Engine(production)
+    engine=Engine(production['visitor'])
     target,*_=walk(production,'TV')
     for op in target.actions:
         if op['kind']=='advance':engine.advance()

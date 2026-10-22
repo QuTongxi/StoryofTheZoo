@@ -9,6 +9,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -19,18 +20,28 @@ def main():
         raise SystemExit('请先运行 tools/check_routes.py 生成 23 条路线。')
     started = time.monotonic()
     with tempfile.TemporaryDirectory(prefix='zoo-cli-') as directory:
+        # Unlock through a real visitor playthrough before testing employee saves.
+        seed = Path(directory) / 'unlock'
+        subprocess.run([sys.executable, str(ROOT / 'game.py'), '--cli', '--session-dir', str(seed),
+                        '--select-story', 'visitor', '--batch', str(ROOT/'runtime/verification/TV-operations.json')],
+                       capture_output=True, text=True, cwd=ROOT, check=True)
+        assert 'employee' in json.loads((seed/'library.json').read_text())['unlocked']
         def check(path):
             ending = path.stem.split('-')[0]
             session = Path(directory) / ending
+            key = 'employee' if ending.startswith(('TE', 'NE', 'BE')) else 'visitor'
+            if key == 'employee':
+                session.mkdir()
+                shutil.copy2(seed/'library.json', session/'library.json')
             result = subprocess.run([
                 sys.executable, str(ROOT / 'game.py'), '--cli', '--session-dir', str(session),
-                '--batch', str(path),
+                '--select-story', key, '--batch', str(path),
             ], capture_output=True, text=True, cwd=ROOT)
             if result.returncode:
                 raise AssertionError((ending, result.stderr, result.stdout[:1000]))
             payload = json.loads(result.stdout)
             assert payload['ok'], (ending, payload)
-            saved = json.loads((session / 'session.json').read_text())
+            saved = json.loads((session / key / 'session.json').read_text())
             state = saved['current']['state']
             assert state['ended'] and state['chapter_id'] == ending, (ending, state['chapter_id'])
             assert (session / 'view/playback.json').is_file()

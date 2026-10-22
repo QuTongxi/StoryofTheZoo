@@ -68,7 +68,8 @@ def run_until_choice(session):
 
 def main(argv=None):
     parser = Parser(description='动物园：AI 命令行入口')
-    parser.add_argument('--story', type=Path, default=ROOT / 'data/story.json')
+    parser.add_argument('--story', type=Path, help='独立故事 JSON；正式故事仍遵守解锁条件')
+    parser.add_argument('--select-story', choices=('visitor', 'employee'), help='从故事选择界面开始指定故事')
     parser.add_argument('--session-dir', type=Path, default=ROOT / 'saves/cli')
     parser.add_argument('--output-dir', type=Path)
     actions = parser.add_mutually_exclusive_group()
@@ -82,6 +83,7 @@ def main(argv=None):
     actions.add_argument('--load', metavar='POINT_ID')
     actions.add_argument('--save', metavar='LABEL')
     actions.add_argument('--new', action='store_true')
+    actions.add_argument('--stories', action='store_true', help='查看可选择的故事及解锁状态')
     actions.add_argument('--inventory', action='store_true')
     actions.add_argument('--rules', nargs='?', const='', metavar='BOOK_ID')
     actions.add_argument('--bookmark', metavar='BOOK_ID:ENTRY_ID')
@@ -89,11 +91,30 @@ def main(argv=None):
     actions.add_argument('--collection', action='store_true', help='查看本地跨周目资料馆，不改变角色知识')
     try:
         args = parser.parse_args(argv)
-        story = Story.load(args.story)
         directory = args.session_dir.resolve()
         output = (args.output_dir or (ROOT / 'runtime/cli' if directory == (ROOT / 'saves/cli').resolve() else directory / 'view')).resolve()
         with session_lock(directory / '.lock'):
-            session = Session(story, directory / 'session.json', persist=False)
+            from core.library import Library, production_key
+            explicit_key = production_key(args.story)
+            library = Library(directory) if args.story is None or explicit_key else None
+            if library:
+                key = args.select_story or explicit_key or library.progress['selected']
+                if args.stories or (not (args.select_story or explicit_key) and
+                                    (args.new or not library.path.exists())):
+                    print(json.dumps({'ok': True, 'protocol_version': 2, 'status': 'story_selection',
+                                      'stories': library.cards(), 'hint': '--select-story visitor 开始游客线。'}, ensure_ascii=False, indent=2))
+                    return 0
+                if not library.unlocked(key):
+                    print(json.dumps({'ok': True, 'protocol_version': 2, 'status': 'locked',
+                                      'story_id': key, 'popup': library.popup(key)}, ensure_ascii=False, indent=2))
+                    return 0
+                story = library.stories[key]
+                session = library.session(key, persist=False)
+            else:
+                if args.select_story or args.stories:
+                    raise StoryError('--select-story / --stories 仅适用于正式游戏故事目录')
+                story = Story.load(args.story)
+                session = Session(story, directory / 'session.json', persist=False)
             result = {'ok': True, 'protocol_version': 2}
             if args.collection:
                 result['collection'] = session.collection.data
@@ -129,7 +150,7 @@ def main(argv=None):
                     commands=json.loads(args.batch.read_text(encoding='utf-8'))
                     if not isinstance(commands,list) or not 1<=len(commands)<=3000:
                         raise StoryError('批量操作应为 1 至 3000 个操作组成的列表')
-                    if session.engine is None:
+                    if session.engine is None or args.select_story:
                         session.start()
                     transcript=[session.engine.observe()]
                     for number,command in enumerate(commands,1):
@@ -149,7 +170,7 @@ def main(argv=None):
                     result['batch_steps']=len(commands)
                     result['batch_transcript']=str(output/'playback.json')
                     atomic_json(output/'playback.json',present_segment(transcript))
-                elif args.new or session.engine is None:
+                elif args.new or args.select_story or session.engine is None:
                     session.start()
                 elif args.load is not None:
                     session.load(args.load)
@@ -194,6 +215,8 @@ def main(argv=None):
                                    '可用 --flowchart 查看已走过的剧情，--load 存档点返回。')
                 atomic_json(output / 'observation.json', result)
                 session.flush()
+                if library:
+                    library.record(key, session)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     except (StoryError, OSError, ValueError, KeyError, TypeError, RecursionError) as exc:

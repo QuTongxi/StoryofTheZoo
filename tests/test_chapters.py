@@ -272,9 +272,10 @@ def test_gui_complete_demo_flow_and_graph_branch_reload(tmp_path):
         click('settings')
         click('to_title')
         assert app.scene == 'title'
-        click('continue_game')
+        click('load')
+        click('load_auto')
         assert app.engine.state['ended']
-        # Loading the title screen again must retain Continue without starting callbacks.
+        # Reloading the title retains the auto-save without starting callbacks.
         second = App(app.story, tmp_path, muted=True)
         assert second.scene == 'title' and second.engine.export() == app.engine.export()
     finally:

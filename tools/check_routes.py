@@ -28,10 +28,17 @@ CASES={
  'BX1':{'buy_toy':True,('V07','photo'):0},
 }
 
+def load_stories():
+    return {key: Story.load(ROOT/f'data/{key}.json') for key in ('visitor', 'employee')}
+
+def story_key(target):
+    return 'employee' if target.startswith(('TE', 'NE', 'BE')) else 'visitor'
+
 def walk(story,target,options=None,*,snapshots=False):
+    if isinstance(story, dict):
+        story = story[story_key(target)]
     plan=DEFAULTS|CASES.get(target,{})|(options or {})
     e=Engine(story)
-    employee=target.startswith(('TE','NE','BE'))
     visited=set(); decisions=[]; saved={}; once=set()
     for step in range(1600):
         cid,pid=e.state['chapter_id'],e.state['page_id']
@@ -48,9 +55,7 @@ def walk(story,target,options=None,*,snapshots=False):
             e.advance();continue
         if e.choices:
             key=(cid,pid)
-            if key==('prologue','route'):
-                choice=int(employee)
-            elif key==('V03','map_window') and not plan.get('no_map') and not e.state['variables']['map_piece']:
+            if key==('V03','map_window') and not plan.get('no_map') and not e.state['variables']['map_piece']:
                 e.use_item('map');continue
             elif key==('E02','handbook_window') and not plan.get('no_handbook') and not e.state['variables']['staff_page']:
                 e.use_item('handbook');continue
@@ -76,7 +81,7 @@ def main():
         # Draft validation while image production is still in flight. The final
         # normal run validates every real file with Story.load as well.
         Story.asset=lambda self,value: self.root/value
-    story=Story.load(ROOT/'data/story.json')
+    story=load_stories()
     started=time.monotonic();report=[];union=set();snapshot_dir=ROOT/'runtime/verification'
     snapshot_dir.mkdir(parents=True,exist_ok=True)
     for target in CASES:

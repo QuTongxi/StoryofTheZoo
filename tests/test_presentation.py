@@ -48,7 +48,8 @@ def presentation_story(root):
                      {'property': 'decision', 'value': [{'text': '跨章', 'next_id': 'next'}]}]},
                  {'id': 'next', 'actions': [{'property': 'chapter', 'value': 'two'}]}, {'id': 'END'}]},
             {'id': 'two', 'title': '第二章', 'subtitle': '10:00 / 兽舍', 'description': '一切正常。', 'background': 'bg.png',
-             'contents': [{'id': 'START', 'actions': [{'property': 'dialogue', 'value': '抵达。'},
+             'contents': [{'id': 'START', 'actions': [{'property': 'illustration', 'value': 'bg.png'},
+                 {'property': 'dialogue', 'value': '抵达。'},
                  {'property': 'decision', 'value': [{'text': '结束', 'next_id': 'END'}]}]}, {'id': 'END'}]}]}
     exercised = {a['property'] for c in doc['chapters'] for node in c['contents'] for a in node.get('actions', [])}
     assert exercised == set(PROPERTIES)  # Adding a property requires adding adapter coverage.

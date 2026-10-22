@@ -16,26 +16,36 @@
     {
       "id": "ape_exit",
       "folder": "backgrounds",
-      "description": "Sunlit exit from a primate enclosure, green temporary barrier half closed by a distant blue-uniform adult employee, monkeys visible far behind glass, a snack cart beyond, relief after tension.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/ape_exit.png",
+          "revision": "before foreground-person removal",
+          "sha256": "68c91f2ffb1352382945bab5e37bbe6c12c6426fdd0fc685bad05da9e59ba6f8"
+        }
       ],
-      "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Sunlit exit from a primate enclosure, green temporary barrier half closed by a distant blue-uniform adult employee, monkeys visible far behind glass, a snack cart beyond, relief after tension.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/ape_exit.png",
       "tool": "OpenAI imagegen",
-      "sha256": "68c91f2ffb1352382945bab5e37bbe6c12c6426fdd0fc685bad05da9e59ba6f8"
+      "sha256": "51a921bc89433a48d8f5db6952e971cb896c4befe27737279ee3c7305313380b",
+      "revision_source_sha256": "68c91f2ffb1352382945bab5e37bbe6c12c6426fdd0fc685bad05da9e59ba6f8"
     },
     {
       "id": "ape_fork",
       "folder": "backgrounds",
-      "description": "A zoo primate habitat where the walkway inexplicably splits into two similar paths. Actual monkeys behind glass on the left, a small white rabbit near the right path fence, adults walking toward the right, dense green canopy. Two blank arrow signs.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/ape_fork.png",
+          "revision": "before foreground-person removal",
+          "sha256": "879a31a74a881d61573af47a541762ea951942d54109c502a4b5b48a9e26de61"
+        }
       ],
-      "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. A zoo primate habitat where the walkway inexplicably splits into two similar paths. Actual monkeys behind glass on the left, a small white rabbit near the right path fence, adults walking toward the right, dense green canopy. Two blank arrow signs. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/ape_fork.png",
       "tool": "OpenAI imagegen",
-      "sha256": "879a31a74a881d61573af47a541762ea951942d54109c502a4b5b48a9e26de61"
+      "sha256": "3e49839d1a12c7282e4a1ee30608c3d1065841e84b0a864f3f4178525240533c",
+      "revision_source_sha256": "879a31a74a881d61573af47a541762ea951942d54109c502a4b5b48a9e26de61"
     },
     {
       "id": "aquarium_dawn",
@@ -112,14 +122,19 @@
     {
       "id": "bus_day",
       "folder": "backgrounds",
-      "description": "Sunny Chinese city bus stop outside a zoo, a city bus arriving at right, adults waiting naturally, leafy morning streets, cheerful spring daylight.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/bus_day.png",
+          "revision": "before foreground-person removal",
+          "sha256": "1df06a26d51020c027dd57f031c713ef1718520950efb17306f72346605ba717"
+        }
       ],
-      "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Sunny Chinese city bus stop outside a zoo, a city bus arriving at right, adults waiting naturally, leafy morning streets, cheerful spring daylight. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/bus_day.png",
       "tool": "OpenAI imagegen",
-      "sha256": "1df06a26d51020c027dd57f031c713ef1718520950efb17306f72346605ba717"
+      "sha256": "d35ec49505807340314193c40442c42338fcd7116021f02b6f807cdcc0b99bed",
+      "revision_source_sha256": "1df06a26d51020c027dd57f031c713ef1718520950efb17306f72346605ba717"
     },
     {
       "id": "controlroom",
@@ -148,14 +163,19 @@
     {
       "id": "drink_shop",
       "folder": "backgrounds",
-      "description": "Zoo small beverage shop, open counter, neatly arranged water and colorful bottles, a single dark red glass bottle on one shelf, blue-uniform adult clerk in distant background, afternoon warm light. No legible product labels.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/drink_shop.png",
+          "revision": "before foreground-person removal",
+          "sha256": "0352ffd0734f3014178bcafec536cf415a6c64debc98e0c8ecdbe769b31116ce"
+        }
       ],
-      "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Zoo small beverage shop, open counter, neatly arranged water and colorful bottles, a single dark red glass bottle on one shelf, blue-uniform adult clerk in distant background, afternoon warm light. No legible product labels.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/drink_shop.png",
       "tool": "OpenAI imagegen",
-      "sha256": "0352ffd0734f3014178bcafec536cf415a6c64debc98e0c8ecdbe769b31116ce"
+      "sha256": "3d3535c0a39f47acda62a23b02372e4c1d3b6aecbd5ee28c94905ec8dc0f39bc",
+      "revision_source_sha256": "0352ffd0734f3014178bcafec536cf415a6c64debc98e0c8ecdbe769b31116ce"
     },
     {
       "id": "elephant_abnormal",
@@ -172,14 +192,19 @@
     {
       "id": "elephant_gate",
       "folder": "backgrounds",
-      "description": "Visitor view outside a zoo elephant enclosure, waist-high metal barrier, a male security guard in distance controlling entry, adult crowds backing away, one distant adult wearing small rabbit-ear earrings. No clear view of abnormal animal; tense daylight.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/elephant_gate.png",
+          "revision": "before foreground-person removal",
+          "sha256": "026a969c381efe67912df9d1c239eb00d884710a5fd8dca93d781ece7514d9b0"
+        }
       ],
-      "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Visitor view outside a zoo elephant enclosure, waist-high metal barrier, a male security guard in distance controlling entry, adult crowds backing away, one distant adult wearing small rabbit-ear earrings. No clear view of abnormal animal; tense daylight.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/elephant_gate.png",
       "tool": "OpenAI imagegen",
-      "sha256": "026a969c381efe67912df9d1c239eb00d884710a5fd8dca93d781ece7514d9b0"
+      "sha256": "35d3064959520b9175357da5b85fa6d01a8a847127c15f0096aa7f7395a7b122",
+      "revision_source_sha256": "026a969c381efe67912df9d1c239eb00d884710a5fd8dca93d781ece7514d9b0"
     },
     {
       "id": "food_shelf",
@@ -197,10 +222,19 @@
       "id": "gate_day",
       "folder": "backgrounds",
       "transparent": false,
-      "prompt": "Wide cinematic landscape 16:9 environment artwork for a high-quality contemporary 2D anime romance visual novel. A cheerful Chinese municipal zoo entrance on a sunny late spring morning, believable modern ticket booths, pale concrete entrance arch, green metal gates, leafy trees, tiled footpath, small notice boards showing ONLY illegible horizontal marks. A few individually drawn anime adult visitors in casual clothing, a couple taking a photo and an adult pushing an empty stroller, natural scale, not silhouettes. Warm sunlight, fresh greens, pale blue sky, rich painterly detail, beautiful visual novel background. Eye-level perspective, architecture readable, lower quarter relatively clear for dialogue UI. No text or watermarks, no monsters, no UI, no split panels. Bright and welcoming, consistent anime illustration style.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/gate_day.png",
       "tool": "OpenAI imagegen",
-      "sha256": "100bc43c0d9defb4bbfccdeaa9e40ac4da56fb71c96524984868ef1f9fe49734"
+      "sha256": "ca2e6e22250e517f332eeb48301b76ffa3a9adcef3c7921aae0d26ff94432836",
+      "revision_source_sha256": "100bc43c0d9defb4bbfccdeaa9e40ac4da56fb71c96524984868ef1f9fe49734",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
+      "refs": [
+        {
+          "path": "data/art/backgrounds/gate_day.png",
+          "revision": "before foreground-person removal",
+          "sha256": "100bc43c0d9defb4bbfccdeaa9e40ac4da56fb71c96524984868ef1f9fe49734"
+        }
+      ]
     },
     {
       "id": "guest_dark",
@@ -253,14 +287,19 @@
     {
       "id": "jelly_night",
       "folder": "backgrounds",
-      "description": "Aquarium jellyfish gallery at midnight, luminous jellyfish behind vast blue tanks, the public gallery itself remains EVENLY BRIGHT and reliable, all ceiling lights working, dark other corridors visible beyond, fragile oasis in psychological horror.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/jelly_night.png",
+          "revision": "before foreground-person removal",
+          "sha256": "27f18f49349b9b38452e787f3c1e47a9622a0a1cfae46cd8df2d7913035666a9"
+        }
       ],
-      "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Aquarium jellyfish gallery at midnight, luminous jellyfish behind vast blue tanks, the public gallery itself remains EVENLY BRIGHT and reliable, all ceiling lights working, dark other corridors visible beyond, fragile oasis in psychological horror.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/jelly_night.png",
       "tool": "OpenAI imagegen",
-      "sha256": "27f18f49349b9b38452e787f3c1e47a9622a0a1cfae46cd8df2d7913035666a9"
+      "sha256": "c474cdbe44ececad0491b220a29aedef56966e5f819c1e8afbeef97bcb89476a",
+      "revision_source_sha256": "27f18f49349b9b38452e787f3c1e47a9622a0a1cfae46cd8df2d7913035666a9"
     },
     {
       "id": "lion_four",
@@ -277,14 +316,19 @@
     {
       "id": "lion_public",
       "folder": "backgrounds",
-      "description": "Public exit outside a white lion enclosure in afternoon, pale rock habitat behind fencing, adult man seated recovering on steps with his family and distant blue staff, restrained aftermath, not a battle.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/lion_public.png",
+          "revision": "before foreground-person removal",
+          "sha256": "f28cc783e9bd77ea5e0ff438254f9bdfb2c4c18d13c4c764585243a6b472a837"
+        }
       ],
-      "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Public exit outside a white lion enclosure in afternoon, pale rock habitat behind fencing, adult man seated recovering on steps with his family and distant blue staff, restrained aftermath, not a battle.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/lion_public.png",
       "tool": "OpenAI imagegen",
-      "sha256": "f28cc783e9bd77ea5e0ff438254f9bdfb2c4c18d13c4c764585243a6b472a837"
+      "sha256": "0ce7ba6c5ae36a068f5ebf7cfaf4abb718898473aaf156279cc0dcd84d3cd661",
+      "revision_source_sha256": "f28cc783e9bd77ea5e0ff438254f9bdfb2c4c18d13c4c764585243a6b472a837"
     },
     {
       "id": "lion_work",
@@ -336,14 +380,19 @@
     {
       "id": "rabbit_day",
       "folder": "backgrounds",
-      "description": "Beautiful zoo rabbit enclosure on a sunny morning, visible cute white and brown rabbits behind safe low fencing, shrubs, paved visitor walkway, a few anime adult tourists pointing at the animals. Welcoming ordinary zoo.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/rabbit_day.png",
+          "revision": "before foreground-person removal",
+          "sha256": "60b3af846f84099a16144458d352d56b886243da78824b2793d1d8b319dbe95e"
+        }
       ],
-      "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Beautiful zoo rabbit enclosure on a sunny morning, visible cute white and brown rabbits behind safe low fencing, shrubs, paved visitor walkway, a few anime adult tourists pointing at the animals. Welcoming ordinary zoo. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/rabbit_day.png",
       "tool": "OpenAI imagegen",
-      "sha256": "60b3af846f84099a16144458d352d56b886243da78824b2793d1d8b319dbe95e"
+      "sha256": "433e4525eedd48b5e2d5f3ad6fc9448b433448681eafa370b0e414c0cfdb114e",
+      "revision_source_sha256": "60b3af846f84099a16144458d352d56b886243da78824b2793d1d8b319dbe95e"
     },
     {
       "id": "rabbit_shadow",
@@ -360,14 +409,19 @@
     {
       "id": "rest_day",
       "folder": "backgrounds",
-      "description": "Bright ordinary zoo rest plaza with wooden benches and café awning, water dispenser and vending machine, adult visitors eating sandwiches, lively calm midday, leafy shade from an artificial awning, no rabbits.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/rest_day.png",
+          "revision": "before foreground-person removal",
+          "sha256": "d556d94b398147a1df032f6f7cd8f310df45b55943e21447219c771c878d5210"
+        }
       ],
-      "prompt": "Production illustration for a 2D Japanese anime visual novel, refined painted cel shading, coherent contemporary Chinese municipal zoo romance horror setting. Widescreen 16:9, full detailed scenic composition. Important content upper two thirds. No UI, no readable text, no logo, no photorealism, no panels. Bright ordinary zoo rest plaza with wooden benches and café awning, water dispenser and vending machine, adult visitors eating sandwiches, lively calm midday, leafy shade from an artificial awning, no rabbits.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/rest_day.png",
       "tool": "OpenAI imagegen",
-      "sha256": "d556d94b398147a1df032f6f7cd8f310df45b55943e21447219c771c878d5210"
+      "sha256": "337a950c4934879016bd3b9e178b1ea77c24ac2ab87a74b6f762650398e307b2",
+      "revision_source_sha256": "d556d94b398147a1df032f6f7cd8f310df45b55943e21447219c771c878d5210"
     },
     {
       "id": "security",
@@ -408,14 +462,19 @@
     {
       "id": "ticket_window",
       "folder": "backgrounds",
-      "description": "Close environment view of a modern municipal zoo ticket booth, counter with two paper tickets and folded maps, adult woman clerk behind glass, queue of adult visitors in background, bright morning. Ticket markings only abstract lines.",
+      "description": "Reusable environment background, featured people removed; original scenery and animals retained.",
       "refs": [
-        "gate_day"
+        {
+          "path": "data/art/backgrounds/ticket_window.png",
+          "revision": "before foreground-person removal",
+          "sha256": "779d9674c752e11558b458eb6960d39e71713e968e6c4182d4a9b2a5887e678e"
+        }
       ],
-      "prompt": "Original professional 2D Japanese anime visual novel illustration, refined linework, painted cel shading, contemporary Chinese municipal zoo romance-horror. No photorealism, no 3D, no readable text, logos, watermarks or panel divisions. Close environment view of a modern municipal zoo ticket booth, counter with two paper tickets and folded maps, adult woman clerk behind glass, queue of adult visitors in background, bright morning. Ticket markings only abstract lines. Widescreen 16:9 scenic production illustration, immersive detailed setting, important content upper two thirds, no dialogue panel.",
+      "prompt": "Edit this existing anime visual-novel scenery into a reusable ENVIRONMENT BACKGROUND. Remove EVERY human figure, every couple, tourist, clerk, uniformed employee, person in reflections and foreground person. Remove abandoned strollers and personal handbags. Inpaint the vacated areas with the correct pavement, vegetation, furniture or architecture. Preserve the exact setting, perspective, architecture, weather, lighting, animals, animal count, enclosures and scene props. No new character anywhere, no human silhouettes. Especially no embedded main characters. Maintain refined Japanese 2D anime painted background style and widescreen composition. No readable writing or captions; signs use indistinct lines. Full opaque background. Keep original visual quality, do not blur.",
       "path": "data/art/backgrounds/ticket_window.png",
       "tool": "OpenAI imagegen",
-      "sha256": "779d9674c752e11558b458eb6960d39e71713e968e6c4182d4a9b2a5887e678e"
+      "sha256": "4a0eed9eb317b7970de761d28bb6303f3be21012ef789b39e17a1bb68f6f6213",
+      "revision_source_sha256": "779d9674c752e11558b458eb6960d39e71713e968e6c4182d4a9b2a5887e678e"
     },
     {
       "id": "whale_dead",
@@ -686,13 +745,13 @@
     },
     {
       "id": "confession",
-      "folder": "covers",
+      "folder": "illustrations",
       "refs": [
         "covers/confession",
         "backgrounds/guest_dark"
       ],
       "prompt": "Edit first image. Keep the same two adult anime characters, exact faces, clothing, intimate supportive pose, paper tightly held in the young man's left hand, framing and delicate emotional acting. Change only ROOM BACKGROUND: it is the plain closed two-bed guest room shown in second reference. REMOVE the bright fish tank window and all sharks/fish/underwater view behind them, replace with dark plain wall and closed wooden door from second reference. Night lamp OFF. Cinematic low ambient exposure makes faces softly readable without drawing a new light source. Darken background substantially. No UI/text.",
-      "path": "data/art/covers/confession.png",
+      "path": "data/art/illustrations/confession.png",
       "tool": "OpenAI imagegen edit",
       "sha256": "ea343188609eb62f8218c97926c70872eb9d3b81c398dfde454e9efcee6eb0de"
     },
@@ -1131,6 +1190,225 @@
       "path": "data/art/items/water.png",
       "tool": "OpenAI imagegen",
       "sha256": "0567079670e8af0ef0d53aac0c49c197adf1a7409905e72303746422858e4372"
+    },
+    {
+      "id": "tickets",
+      "folder": "illustrations",
+      "description": "Two university students at a zoo ticket counter in sunny morning. Lin Xia (brown shoulder-length waves, yellow rectangle hair clip, pale blue button dress, cream cardigan DRAPED around forearms, tan bag) nervously presses two student ID cards flat on the counter while her male date (black hair, sage green short-sleeve overshirt, white T, dark trousers) receives two narrow tickets and separate folded zoo maps from an anonymous older male clerk. Lin shyly tries to hide her old ID photograph. Lively tender everyday date. ID and signs only abstract tiny lines. Detailed window, counter and zoo gate in distance.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Two university students at a zoo ticket counter in sunny morning. Lin Xia (brown shoulder-length waves, yellow rectangle hair clip, pale blue button dress, cream cardigan DRAPED around forearms, tan bag) nervously presses two student ID cards flat on the counter while her male date (black hair, sage green short-sleeve overshirt, white T, dark trousers) receives two narrow tickets and separate folded zoo maps from an anonymous older male clerk. Lin shyly tries to hide her old ID photograph. Lively tender everyday date. ID and signs only abstract tiny lines. Detailed window, counter and zoo gate in distance.",
+      "refs": [
+        "data/art/characters/lin_day.png",
+        "data/art/characters/player.png",
+        "data/art/backgrounds/ticket_window.png"
+      ],
+      "path": "data/art/illustrations/tickets.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "f2dabd0f8bc246f5a4709932269656c6d484faf1d90930f20c18394440cf3791"
+    },
+    {
+      "id": "blue_rescue",
+      "folder": "illustrations",
+      "description": "On a sunny zoo rabbit-enclosure path a white rabbit has escaped onto pavement. Su Wanqing (black LOW PONYTAIL, plain BLUE short-sleeve work shirt, navy cargo trousers, black watch, dark blue cap pulled low) steps SIDEWAYS between the escaped rabbit and the two students, extends her blue sleeve to signal BACK AWAY and points out an open retreat route. She NEVER touches rabbit. Lin Xia in blue dress with cream cardigan draped on forearms is half rising from a crouch, surprised; male date stands beside her ready to retreat. Nobody touches rabbit, nobody pets it. Emotional focus is the employee quietly protecting friends without greeting them. Wide candid composition, Su face partly obscured by cap.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. On a sunny zoo rabbit-enclosure path a white rabbit has escaped onto pavement. Su Wanqing (black LOW PONYTAIL, plain BLUE short-sleeve work shirt, navy cargo trousers, black watch, dark blue cap pulled low) steps SIDEWAYS between the escaped rabbit and the two students, extends her blue sleeve to signal BACK AWAY and points out an open retreat route. She NEVER touches rabbit. Lin Xia in blue dress with cream cardigan draped on forearms is half rising from a crouch, surprised; male date stands beside her ready to retreat. Nobody touches rabbit, nobody pets it. Emotional focus is the employee quietly protecting friends without greeting them. Wide candid composition, Su face partly obscured by cap.",
+      "refs": [
+        "data/art/characters/su_blue.png",
+        "data/art/characters/lin_day.png",
+        "data/art/characters/player.png",
+        "data/art/backgrounds/rabbit_day.png"
+      ],
+      "path": "data/art/illustrations/blue_rescue.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "a367e5171301535d8008a7564d5f4f2c853686877ecc781a97a43004691929b9"
+    },
+    {
+      "id": "map_ready",
+      "folder": "illustrations",
+      "description": "Sunny but unnervingly quiet path beside rabbit enclosure. Male university student holds a small torn rectangular map strip FIRMLY IN HIS LEFT HAND at his chest while his right hand folds the remaining illustrated zoo map. Lin Xia stands next to him holding her OWN separate paper strip, watching the way out with worry. Two little torn strips, not entire ticket, no labels. His sage green overshirt and her pale blue dress/cream cardigan draped on forearms. Rabbits remain beyond fence, distant leafy shadows. Medium two-person action shot. No hand holding between characters.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Sunny but unnervingly quiet path beside rabbit enclosure. Male university student holds a small torn rectangular map strip FIRMLY IN HIS LEFT HAND at his chest while his right hand folds the remaining illustrated zoo map. Lin Xia stands next to him holding her OWN separate paper strip, watching the way out with worry. Two little torn strips, not entire ticket, no labels. His sage green overshirt and her pale blue dress/cream cardigan draped on forearms. Rabbits remain beyond fence, distant leafy shadows. Medium two-person action shot. No hand holding between characters.",
+      "refs": [
+        "data/art/characters/player.png",
+        "data/art/characters/lin_day.png",
+        "data/art/backgrounds/rabbit_shadow.png"
+      ],
+      "path": "data/art/illustrations/map_ready.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "3e3885a26919021e3757f1525a523dcdb0b265a16c781b9777317fd536cfc108"
+    },
+    {
+      "id": "date_photo",
+      "folder": "illustrations",
+      "description": "Warm afternoon at the zoo flower pergola with white bench. The two university students take a smiling selfie TOGETHER: male in sage green shirt holds smartphone up with right hand, his left hand CLOSED around a small pale map strip at waist; Lin Xia leans slightly toward him, her own small paper strip remains in one lowered hand, her free hand makes a tiny awkward peace gesture. Blue short-sleeved dress and cream cardigan draped around forearms, yellow rectangular hair clip, tan bag. Both eyes looking toward phone. Sunlit wisteria and leaves, youthful gentle romance, believable anatomy.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Warm afternoon at the zoo flower pergola with white bench. The two university students take a smiling selfie TOGETHER: male in sage green shirt holds smartphone up with right hand, his left hand CLOSED around a small pale map strip at waist; Lin Xia leans slightly toward him, her own small paper strip remains in one lowered hand, her free hand makes a tiny awkward peace gesture. Blue short-sleeved dress and cream cardigan draped around forearms, yellow rectangular hair clip, tan bag. Both eyes looking toward phone. Sunlit wisteria and leaves, youthful gentle romance, believable anatomy.",
+      "refs": [
+        "data/art/characters/lin_day.png",
+        "data/art/characters/player.png",
+        "data/art/backgrounds/photo_spot.png"
+      ],
+      "path": "data/art/illustrations/date_photo.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "4cf0d4213da4e1310f701b2393a4a6cb5579d29f66025643924c3e55c6667d6d"
+    },
+    {
+      "id": "rain_entry",
+      "folder": "illustrations",
+      "description": "Late rainy afternoon outside the curved glass aquarium entrance. Male student in sage green short-sleeved overshirt gently supports Lin Xia at the elbow while she steps up over the wet threshold, favoring a sore heel; Lin wears pale blue dress with cream cardigan still draped on forearms, tan bag, white sneakers. They are hesitant, looking inside the dark doorway. Each retains a small pale map strip in their own hand. Rain falls BEHIND them outside, reflections of blue glass on wet paving, blank notice board beside door. Uneasy transition from romantic date to isolation, not action hero rescue.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Late rainy afternoon outside the curved glass aquarium entrance. Male student in sage green short-sleeved overshirt gently supports Lin Xia at the elbow while she steps up over the wet threshold, favoring a sore heel; Lin wears pale blue dress with cream cardigan still draped on forearms, tan bag, white sneakers. They are hesitant, looking inside the dark doorway. Each retains a small pale map strip in their own hand. Rain falls BEHIND them outside, reflections of blue glass on wet paving, blank notice board beside door. Uneasy transition from romantic date to isolation, not action hero rescue.",
+      "refs": [
+        "data/art/characters/lin_day.png",
+        "data/art/characters/player.png",
+        "data/art/backgrounds/aquarium_rain.png"
+      ],
+      "path": "data/art/illustrations/rain_entry.png",
+      "tool": "OpenAI imagegen",
+      "edit_prompts": [
+        "Keep the whole artwork and faces. Fix held objects: both characters hold SMALL TORN PAPER STRIPS, not whole tickets/maps. Make the two currently large paper objects only finger-length crumpled pale paper corners securely held inside closed fists. The man must keep his anatomical LEFT fist clenched around his strip (viewer-right arm). Rearrange his gesture so his RIGHT arm supports Lin's elbow while his LEFT fist remains close to chest with strip. Lin's left hand keeps her own tiny paper strip. Preserve the act of helping her step over threshold, no extra hands.",
+        "Revise this event CG while preserving both identities, clothing, rainy aquarium doorway, cinematic anime style. RECOMPOSE THE TWO ACTORS: put Lin Xia on VIEWER LEFT and the green-shirt male on VIEWER RIGHT. His anatomical RIGHT arm (on viewer-left side of his body, nearest Lin) supports Lin's elbow as she steps over wet threshold. His anatomical LEFT hand (on viewer-right side of his body, away from Lin) is CLOSED holding ONE tiny white crumpled torn map strip at waist. No other paper in his hands. Lin's own LEFT hand holds her tiny crumpled white strip. Both adults, no extra arms, natural anatomy. All major body gestures plainly readable. Keep beige cardigan draped around Lin forearms, pale blue dress, yellow hairclip, tan bag, green short sleeved overshirt and black daypack on man. No whole maps or tickets. Do not simply keep the original arm arrangement; actual sides of characters are swapped.",
+        "Make only one tiny edit to this final illustration. Lin Xia, the girl on VIEWER LEFT, currently has a white scrap in EACH hand. Remove the small white scrap from her anatomical RIGHT hand, the lowered hand at the far viewer-left edge near her thigh. That hand should be empty, naturally curled. Keep the scrap in her anatomical LEFT hand beside her tan bag, and keep the man's scrap unchanged. Exactly TWO paper scraps TOTAL, one per person. Preserve every other detail, pose, face, hand anatomy, scenery, lighting and composition."
+      ],
+      "sha256": "17c71666f3c75a38fa61dda341e1a4d01e98c3e41700f5440e06c13d498c3b86"
+    },
+    {
+      "id": "black_corridor",
+      "folder": "illustrations",
+      "description": "Aquarium guest corridor late night. Gray-sleeved adult male in BLACK uniform extends an empty open palm toward the student male, insinuating a helpful smile. Student in sage green shirt keeps his LEFT fist clenched around a SMALL WHITE PAPER STRIP against his chest and backs toward the brightly glowing jellyfish gallery with Lin Xia. Lin wears cream cardigan PROPERLY ON over blue dress, yellow hairclip, tan bag. She stays close at his side, alarmed. Black man never receives paper. Triangular composition with physical space between them, dark corridor frames bright safe gallery far behind couple. Psychological horror, no blood, no literal demon.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Aquarium guest corridor late night. Gray-sleeved adult male in BLACK uniform extends an empty open palm toward the student male, insinuating a helpful smile. Student in sage green shirt keeps his LEFT fist clenched around a SMALL WHITE PAPER STRIP against his chest and backs toward the brightly glowing jellyfish gallery with Lin Xia. Lin wears cream cardigan PROPERLY ON over blue dress, yellow hairclip, tan bag. She stays close at his side, alarmed. Black man never receives paper. Triangular composition with physical space between them, dark corridor frames bright safe gallery far behind couple. Psychological horror, no blood, no literal demon.",
+      "refs": [
+        "data/art/characters/gray.png",
+        "data/art/characters/player.png",
+        "data/art/characters/lin_night.png",
+        "data/art/backgrounds/hall_night.png"
+      ],
+      "path": "data/art/illustrations/black_corridor.png",
+      "tool": "OpenAI imagegen",
+      "edit_prompts": [
+        "Keep the artwork, faces, clothes, poses, setting and lighting. Correct the male student's anatomical LEFT hand continuity: remove the paper from the fist across his chest (that is his right hand). Instead put a SMALL crumpled white torn paper strip firmly clenched in his lowered LEFT hand on the viewer's right, beside Lin's waist. Right hand may hold shirt near chest, but holds no paper. Also make Lin keep her own separate tiny paper strip clutched in one of her hands gripping his sleeve. Black uniform man receives nothing. No other changes."
+      ],
+      "sha256": "2f4b5a750e5e98228e52c308e2cdbe8bd50d2d278b3fc623890dd540d1b97bfe"
+    },
+    {
+      "id": "room_check",
+      "folder": "illustrations",
+      "description": "Night at aquarium guest-room threshold with two separate narrow beds. Su Wanqing in crimson LONG-SLEEVE uniform and navy trousers stands in doorway OUTSIDE room, low black ponytail, no hairclip. She quietly frees the tan shoulder bag strap caught at the door and tucks it back INSIDE toward Lin Xia. Lin Xia wears cream cardigan properly on over pale blue dress, yellow clip, one hand clenched around her own small paper strip. Male date in green shirt remains a step behind Lin with his own clenched paper. Su looks down at the strap, avoiding a familiar greeting. Jellyfish bedside lamp still softly on awaiting switching off, corridor darker. Caring gesture and concealed recognition, NO embrace.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Night at aquarium guest-room threshold with two separate narrow beds. Su Wanqing in crimson LONG-SLEEVE uniform and navy trousers stands in doorway OUTSIDE room, low black ponytail, no hairclip. She quietly frees the tan shoulder bag strap caught at the door and tucks it back INSIDE toward Lin Xia. Lin Xia wears cream cardigan properly on over pale blue dress, yellow clip, one hand clenched around her own small paper strip. Male date in green shirt remains a step behind Lin with his own clenched paper. Su looks down at the strap, avoiding a familiar greeting. Jellyfish bedside lamp still softly on awaiting switching off, corridor darker. Caring gesture and concealed recognition, NO embrace.",
+      "refs": [
+        "data/art/characters/su_red.png",
+        "data/art/characters/lin_night.png",
+        "data/art/characters/player.png",
+        "data/art/backgrounds/guest_lit.png"
+      ],
+      "path": "data/art/illustrations/room_check.png",
+      "tool": "OpenAI imagegen",
+      "edit_prompts": [
+        "Preserve this event CG, identities, framing, clothing and lighting. Correct only the male student's paper: his visible right hand on backpack strap must hold NO paper. Show his anatomical LEFT hand (viewer-right side of his torso, just behind Lin) keeping a tiny crumpled pale torn strip clenched, partially visible at his waist. Lin keeps her own existing small paper strip. Do not change red employee gently freeing tan bag strap."
+      ],
+      "sha256": "511a29aa2c1904d64696642208d812f49396d27b6116204fb99b35d9b2144f2b"
+    },
+    {
+      "id": "barrier_closed",
+      "folder": "illustrations",
+      "description": "Daytime primate enclosure EXIT. Su Wanqing in blue short sleeve uniform and navy cargo trousers, low black ponytail, slides a heavy green portable barrier across the entrance with both hands. Her tired fingers grip hard. Beyond barrier the path is empty and monkeys remain inside their enclosure. Far opposite end male blue-uniform coworker holds radio, small in distance, no featured visitor couple. This depicts confirming last visitors evacuated and closing the area. Responsible tense action, midday sun, subtle unease.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Daytime primate enclosure EXIT. Su Wanqing in blue short sleeve uniform and navy cargo trousers, low black ponytail, slides a heavy green portable barrier across the entrance with both hands. Her tired fingers grip hard. Beyond barrier the path is empty and monkeys remain inside their enclosure. Far opposite end male blue-uniform coworker holds radio, small in distance, no featured visitor couple. This depicts confirming last visitors evacuated and closing the area. Responsible tense action, midday sun, subtle unease.",
+      "refs": [
+        "data/art/characters/su_blue.png",
+        "data/art/characters/he.png",
+        "data/art/backgrounds/ape_closed.png"
+      ],
+      "path": "data/art/illustrations/barrier_closed.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "afd1c33f0f4a1e84160772fe05ca7bfb9ff7464a147f02b2d9c3a51092a98fab"
+    },
+    {
+      "id": "elephant_anchor",
+      "folder": "illustrations",
+      "description": "A psychological horror moment at zoo elephant enclosure in broad daylight. Foreground LEFT in three-quarter side view Su Wanqing in BLUE uniform and navy cargo trousers, black low ponytail, forcibly turns her eyes AWAY FROM the animal and focuses on the normal grey elephant photograph on an information board. Her lips recite quietly, fingers tense on board edge. Background right behind enclosure barrier a huge PALLID WHITE elephant-shaped body with grotesquely long RABBIT EARS, distorted weight and long trunk moves partly behind foliage. Do not transform Su. The sign illustration is clearly a NORMAL GREY elephant with fan ears, without readable text. No human gore. Composition contrasts her desperate use of the ordinary reference photograph with the impossible creature behind.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. A psychological horror moment at zoo elephant enclosure in broad daylight. Foreground LEFT in three-quarter side view Su Wanqing in BLUE uniform and navy cargo trousers, black low ponytail, forcibly turns her eyes AWAY FROM the animal and focuses on the normal grey elephant photograph on an information board. Her lips recite quietly, fingers tense on board edge. Background right behind enclosure barrier a huge PALLID WHITE elephant-shaped body with grotesquely long RABBIT EARS, distorted weight and long trunk moves partly behind foliage. Do not transform Su. The sign illustration is clearly a NORMAL GREY elephant with fan ears, without readable text. No human gore. Composition contrasts her desperate use of the ordinary reference photograph with the impossible creature behind.",
+      "refs": [
+        "data/art/characters/su_blue.png",
+        "data/art/backgrounds/elephant_abnormal.png"
+      ],
+      "path": "data/art/illustrations/elephant_anchor.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "03f0fc84692f78729c45bc99fdde4df92fc4b8038de13f800a8aa6bd0315ead5"
+    },
+    {
+      "id": "lion_rescue",
+      "folder": "illustrations",
+      "description": "Zoo white-lion working passage in afternoon. Su Wanqing in blue shirt, navy pants, black low ponytail turns her body TOWARD the exit while just throwing a small splash of dark red LIQUID FROM A BOTTLE at the FIRST approaching WHITE LION behind the enclosure barrier. The liquid is equipment, not injury, NO wounds or gore. Her eyes stay on exit, not on lions. Show only ONE lion near the fence, other lions safely OUT OF FRAME so no erroneous total count. Male blue coworker stands at safe exit with a frightened middle-aged male visitor in light shirt. Dynamic side view, moment of retreat, no heroic pose, exhaustion and duty.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Zoo white-lion working passage in afternoon. Su Wanqing in blue shirt, navy pants, black low ponytail turns her body TOWARD the exit while just throwing a small splash of dark red LIQUID FROM A BOTTLE at the FIRST approaching WHITE LION behind the enclosure barrier. The liquid is equipment, not injury, NO wounds or gore. Her eyes stay on exit, not on lions. Show only ONE lion near the fence, other lions safely OUT OF FRAME so no erroneous total count. Male blue coworker stands at safe exit with a frightened middle-aged male visitor in light shirt. Dynamic side view, moment of retreat, no heroic pose, exhaustion and duty.",
+      "refs": [
+        "data/art/characters/su_blue.png",
+        "data/art/characters/he.png",
+        "data/art/backgrounds/lion_work.png"
+      ],
+      "path": "data/art/illustrations/lion_rescue.png",
+      "tool": "OpenAI imagegen",
+      "edit_prompts": [
+        "Keep this anime action CG exactly, including one white lion, red liquid thrown from bottle, worker uniforms and all identities. Correct Su Wanqing's gaze/head only: she is ALREADY RETREATING to the exit on viewer RIGHT with coworker. Turn her face and eyes toward that exit/right, AWAY from lion on viewer LEFT, not looking back at the lion. Body moving right while arm finishes throw behind her. Do not change animal, liquid, barrier or people."
+      ],
+      "sha256": "dc7dc9afa8cd7a4c8f3436249919e40deca8465635f0fae23a512bcbe65e7196"
+    },
+    {
+      "id": "red_handover",
+      "folder": "illustrations",
+      "description": "Just after midnight at an aquarium staff worktable. Su Wanqing has ALREADY changed into crimson long sleeve uniform and navy trousers, BLACK low ponytail, no yellow clip. She fastens a cuff and studies a plain red handbook on the table. Xu Lan (adult woman, cropped short black bob, red collared shirt, charcoal trousers) points to a checklist and organized equipment. Folded BLUE work shirt lies safely beside Su on the table. Both fully clothed. Bright blue jellyfish gallery beyond glass, side service counter and kettle. First-night training, responsibility and uncertainty, restrained cinematic composition. No readable text.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Just after midnight at an aquarium staff worktable. Su Wanqing has ALREADY changed into crimson long sleeve uniform and navy trousers, BLACK low ponytail, no yellow clip. She fastens a cuff and studies a plain red handbook on the table. Xu Lan (adult woman, cropped short black bob, red collared shirt, charcoal trousers) points to a checklist and organized equipment. Folded BLUE work shirt lies safely beside Su on the table. Both fully clothed. Bright blue jellyfish gallery beyond glass, side service counter and kettle. First-night training, responsibility and uncertainty, restrained cinematic composition. No readable text.",
+      "refs": [
+        "data/art/characters/su_red.png",
+        "data/art/characters/xulan.png",
+        "data/art/backgrounds/jelly_night.png"
+      ],
+      "path": "data/art/illustrations/red_handover.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "e5e3ece285e2074e634f824ccd9d32009c8cb925e10a82bf6390056ec7d97eaf"
+    },
+    {
+      "id": "entrance_defense",
+      "folder": "illustrations",
+      "description": "At 1 AM INSIDE aquarium entry: Su Wanqing with black low ponytail in crimson long-sleeved uniform holds a black work stun baton defensively in FRONT of her, keeping DISTANCE from a black-uniformed male at the door. Xu Lan, short black bob/red shirt, stands at the SIDE helping block entry. Gray-sleeved black man strains against doorway, sly threatening smile, one hand on doorframe. Maintain gap between bodies; no grabbing or wrestling, no blood or wounds, no magical lightning. Small electric indicator only. Bright blue aquarium light behind red employees, nearly black wet exterior behind intruder. Su frightened but holds position, palms tense, severe psychological horror without demon anatomy.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. At 1 AM INSIDE aquarium entry: Su Wanqing with black low ponytail in crimson long-sleeved uniform holds a black work stun baton defensively in FRONT of her, keeping DISTANCE from a black-uniformed male at the door. Xu Lan, short black bob/red shirt, stands at the SIDE helping block entry. Gray-sleeved black man strains against doorway, sly threatening smile, one hand on doorframe. Maintain gap between bodies; no grabbing or wrestling, no blood or wounds, no magical lightning. Small electric indicator only. Bright blue aquarium light behind red employees, nearly black wet exterior behind intruder. Su frightened but holds position, palms tense, severe psychological horror without demon anatomy.",
+      "refs": [
+        "data/art/characters/su_red.png",
+        "data/art/characters/xulan.png",
+        "data/art/characters/gray.png",
+        "data/art/backgrounds/aquarium_night.png"
+      ],
+      "path": "data/art/illustrations/entrance_defense.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "9ea02e49c63543c758f8e8ce346533867138151240ffadc7469e7aa780243b3e"
+    },
+    {
+      "id": "whale_watch",
+      "folder": "illustrations",
+      "description": "Night aquarium maintenance route. Su Wanqing in crimson long-sleeve uniform, navy trousers and black low ponytail is small against a monumental tank. She is pushing a workcart toward a closed metal storage chest, with one sealed food packet and a white rabbit plush on cart. She glances toward the tank in disbelief: a HUGE motionless GREY ELEPHANT SHAPE hangs submerged deep in dark BLUE water, normal elephant ears and trunk, NOT a whale. No wounds, no magical creature. Claustrophobic cold reflections, oppressive scale, empty corridor, employee isolated with responsibility. One Su only, no tourists. Keep Su face and cart contents visible in upper-middle composition.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Night aquarium maintenance route. Su Wanqing in crimson long-sleeve uniform, navy trousers and black low ponytail is small against a monumental tank. She is pushing a workcart toward a closed metal storage chest, with one sealed food packet and a white rabbit plush on cart. She glances toward the tank in disbelief: a HUGE motionless GREY ELEPHANT SHAPE hangs submerged deep in dark BLUE water, normal elephant ears and trunk, NOT a whale. No wounds, no magical creature. Claustrophobic cold reflections, oppressive scale, empty corridor, employee isolated with responsibility. One Su only, no tourists. Keep Su face and cart contents visible in upper-middle composition.",
+      "refs": [
+        "data/art/characters/su_red.png",
+        "data/art/backgrounds/whale_dead.png"
+      ],
+      "path": "data/art/illustrations/whale_watch.png",
+      "tool": "OpenAI imagegen",
+      "sha256": "759ae4829fe4af10bbe897fcc57ae57b22703df439617ff83a6febf27b45b480"
+    },
+    {
+      "id": "overheard_confession",
+      "folder": "illustrations",
+      "description": "Aquarium guest corridor at midnight. Su Wanqing in crimson long-sleeve work shirt/navy pants and black low ponytail pauses just OUTSIDE a CLOSED room door. She holds a clipboard with exactly three small checked boxes, otherwise illegible lines. Her exhausted face softens into a tiny involuntary smile while hearing friends inside. She does not open door or peek, no visible couple, no speech bubbles. Cold blue light leaks from bright jellyfish gallery at far end, long ominous empty corridor beyond her. Intimate fleeting relief before danger, shoulders still tense, quiet cinematic medium-wide shot.",
+      "prompt": "Create one full-frame widescreen 16:9 EVENT CG for a Japanese 2D anime romance-horror visual novel, refined hand-drawn linework, detailed painted scenery, cinematic storytelling. This is an illustration of characters ACTING IN A PLACE, not a sprite sheet, not portraits pasted onto a backdrop. Characters interact naturally with the architecture and each other. Preserve faces, hairstyles, clothing and ages from supplied character refs; all main characters are ADULTS 20-30 years old. Do not draw extra copies of a character. Full opaque artwork, no UI, text, captions, logo or panels. Keep faces and key gestures in upper two thirds so a dialogue box can cover the bottom. Aquarium guest corridor at midnight. Su Wanqing in crimson long-sleeve work shirt/navy pants and black low ponytail pauses just OUTSIDE a CLOSED room door. She holds a clipboard with exactly three small checked boxes, otherwise illegible lines. Her exhausted face softens into a tiny involuntary smile while hearing friends inside. She does not open door or peek, no visible couple, no speech bubbles. Cold blue light leaks from bright jellyfish gallery at far end, long ominous empty corridor beyond her. Intimate fleeting relief before danger, shoulders still tense, quiet cinematic medium-wide shot.",
+      "refs": [
+        "data/art/characters/su_red.png",
+        "data/art/backgrounds/hall_night.png"
+      ],
+      "path": "data/art/illustrations/overheard_confession.png",
+      "tool": "OpenAI imagegen",
+      "edit_prompts": [
+        "Preserve this anime CG of red-uniform employee listening outside CLOSED guest room. The guest-room lamp is OFF and the room completely DARK. Remove all warm yellow glow from the narrow door glass and door cracks to her LEFT: glass must be near-black, opaque dark with only faint cool reflected corridor light. No warm light shining on her from room. Keep corridor blue illumination, soft smile, low ponytail and clipboard with three checks. No other changes."
+      ],
+      "sha256": "9c5168d51cbf2ce7af7e9312a84d4eea998bf716c9375f9a15a26f07b13a0356"
     }
-  ]
+  ],
+  "presentation_policy": {
+    "backgrounds": "Scenery without route protagonists or featured staff. Anonymous distant public may remain.",
+    "illustrations": "Complete event composition; never overlay character sprites.",
+    "default_character_slot": "left"
+  }
 }

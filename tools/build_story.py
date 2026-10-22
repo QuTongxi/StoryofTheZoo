@@ -39,6 +39,9 @@ def ach(key, title, description):
 def bg(key, folder='backgrounds'):
     return action('background', f'art/{folder}/{key}.png', options='fade in', args=.55)
 
+def cg(key):
+    return action('illustration', f'art/illustrations/{key}.png', options='fade in', args=.55)
+
 def sound(key):
     return action('sound', f'audio/{key}.wav')
 
@@ -128,12 +131,17 @@ class Scene:
         self.chapter = dict(id=key, title=title or TITLES.get(key, key), subtitle=(
             '今天的约会' if key.startswith('V') else '今天的值班' if key.startswith('E') else '动物园 · 留园须知'),
             background=f'art/{folder}/{background}.png', contents=self.nodes)
+        self.visual_mode = 'background' if folder == 'backgrounds' else 'illustration'
+        self.chapter['visual_mode'] = self.visual_mode
         if ending:
             self.chapter['ending'] = ending
         CHAPTERS.append(self.chapter)
         self.node('START', action('music', f'audio/{music}.mp3'))
 
     def node(self, key=None, *actions):
+        for a in actions:
+            if a.get('property') in ('background', 'illustration'):
+                self.visual_mode = a['property']
         self.count += 1
         key = key or f'p{self.count:03}'
         assert all(n['id'] != key for n in self.nodes), (self.key, key)
@@ -164,11 +172,11 @@ class Scene:
         # Endings are full illustration compositions. Environmental pages never
         # retain a sprite from the preceding line and obscure an animal or clue.
         visuals = [action('character', options='hide', slot=s) for s in ('left','center','right')]
-        if speaker in portraits and not self.chapter.get('ending') and not getattr(self, 'hide_portraits', False):
+        if speaker in portraits and self.visual_mode == 'background':
             portrait = portraits[speaker]
             if speaker == '林夏' and not night and any(w in p for w in ('就是我们', '只请一个', '笑了')):
                 portrait = 'lin_blush'
-            visuals.append(action('character', f'art/characters/{portrait}.png', slot='right', options='show'))
+            visuals.append(action('character', f'art/characters/{portrait}.png', slot='left', options='show'))
         d = action('dialogue', p)
         if speaker:
             d['speaker'] = speaker
@@ -210,17 +218,18 @@ def visitor():
     s.choice('date','今天的约定。',[("今天听你的安排。",'ticket',[action('dialogue','真的吗？那第一项是……先进去。后面的还可以商量。',speaker='林夏')]),
         ('先说好，今天只有我们两个？','ticket',[action('dialogue','嗯。没有学习小组，没有临时赶来的室友。……就是我们两个。',speaker='林夏')]),
         ('你把回程也查好了？','ticket',[action('dialogue','查了。但最后一班先不告诉你。怕你刚到就想着走。',speaker='林夏')])])
-    s.node('ticket',bg('ticket_window'))
+    s.node('ticket',cg('tickets'))
     s.prose('[转场：售票窗口','＜获得：')
     s.node(None, give('ticket'),give('map'),give('wallet'),book('visitor'),ach('arrival','今天的门票','领取完整的游客守则。'),action('popup','已获得门票和游园地图。守则 R 可重读整份文字；背包 B 可以操作物品。查看与阅读不会消耗游戏时间。'))
     s.node(None,bg('gate_day'))
     s.prose('[规则界面关闭后','＜进入V02')
     s.end('V02')
     s = Scene('V02','rabbit_day')
-    s.prose(end='＜选择＞')
+    s.prose(end='[她下意识屈膝')
+    s.node(None,cg('blue_rescue'));s.prose('[她下意识屈膝','＜选择＞')
     s.choice('rabbit','兔子抬起了头。',[("拉住林夏的手腕，一起退到步道中央。",'retreat',[action('dialogue','[林夏立刻站起，跟着我退开，没有再去捡脚边的纸巾。]')]),
         ('先退开，叫林夏跟上。','retreat',[action('dialogue','林夏，先过来。',speaker='我')])])
-    s.node('retreat')
+    s.node('retreat',bg('rabbit_day'))
     s.prose('[兔子朝我们','＜进入V03')
     s.end('V03')
     s = Scene('V03','rabbit_shadow','unease')
@@ -230,7 +239,9 @@ def visitor():
         ('沿步道离开。','depart'),('把门票撕开。','wrong_ticket'),('再听一下，留在当前操作窗口。','listen')])
     s.node('wrong_ticket',fn('tear_ticket'));s.node(None,jump('map_window'))
     s.say('（笑声从围栏里传来。林夏已经握住自己的纸片，等着我。）','listen');s.node(None,jump('map_window'))
-    s.node('depart',fn('check',**{'if':{'map_piece':True,'map_held':True},'yes':'V04','no':'BV1'}));s.end()
+    s.node('depart',fn('check',**{'if':{'map_piece':True,'map_held':True},'yes':'prepared','no':'unprepared','kind':'jump'}))
+    s.node('unprepared',go('BV1'))
+    s.node('prepared',cg('map_ready'));s.say('[我把纸片握紧，折好剩下的地图。林夏看了一眼我的手，跟着我走向步道出口。]');s.end('V04')
     s = Scene('V04','ape_fork','unease')
     s.prose(end='＜选择＞')
     s.choice('fork','两条路。地图上本来只有一条。',[('走左路，尽快离开。','left'),('右边人多，跟着他们。','wrong')])
@@ -266,7 +277,7 @@ def visitor():
         ('在出口再拍一张，就回去。','return',[state(photo=True,return_variant='photo')]),
         ('再陪我走一小段吧，我想补一张好看的。','continue',[state(photo=True)])])
     s.node('return',fn('visitor_departure',target='NV1'))
-    s.node('continue',bg('photo_spot'),ach('photo','风吹过的合照','留下两个人的合照。'))
+    s.node('continue',cg('date_photo'),ach('photo','风吹过的合照','留下两个人的合照。'))
     s.prose('[背景：15:35','＜时间：16:20');s.end('V08')
     s = Scene('V08','aquarium_rain','unease')
     s.prose(end='＜抵达门前')
@@ -276,7 +287,7 @@ def visitor():
         ('按游客守则离开，并打电话报告。','return',[state(return_variant='report')]),
         ('先进去避雨。不换衣服。（违背游客守则）','enter')])
     s.node('return',fn('visitor_departure',target='NV1'))
-    s.node('enter');s.prose('我：你先坐一会儿','[音效：')
+    s.node('enter',cg('rain_entry'));s.prose('我：你先坐一会儿','[音效：')
     s.node(None,bg('aquarium_lobby'),sound('pump'),book('inner'),fn('enter_aquarium'),action('popup','规则已更新：海洋馆内部告示。入馆时间 16:20。'))
     s.prose('林夏：四个小时。','＜进入V09');s.end('V09')
     s = Scene('V09','jelly_day','night')
@@ -297,22 +308,22 @@ def visitor():
     s.node('stay',bg('guest_lit'));s.prose('我：先找房间','[两人先在公共水母区')
     s.node(None,bg('jelly_night'));s.prose('[两人先在公共水母区','＜进入V11');s.end('V11')
     s = Scene('V11','hall_night','night')
-    s.prose(end='＜选择＞')
+    s.prose(end='[我把左手收近身体。')
+    s.node(None,cg('black_corridor'));s.prose('[我把左手收近身体。','＜选择＞')
     s.choice('black','纸边已经被汗浸软。',[('不交出地图，退回亮着的水母区。','refuse'),('把地图虚线部分交给他。','give',[state(map_held=False)])])
     s.node('give',go('BV5'));s.node('refuse',bg('jelly_night'));s.prose('我：不用。请让一下。','＜两人回到');s.end('V12')
     s = Scene('V12','guest_lit','night')
-    s.node(None,sound('knock'));s.prose(end='＜操作：')
+    s.node(None,sound('knock'));s.prose(end='[红衣员工把被门夹住')
+    s.node(None,cg('room_check'));s.prose('[红衣员工把被门夹住','＜操作：')
     s.choice('lamp','红衣员工等在门边。',[('自己关闭小夜灯。','off',[action('dialogue','好。休息吧。',speaker='红衣员工')]),
         ('还想问她是不是同学。','off',[action('dialogue','我先替你们关。',speaker='红衣员工')])])
     s.node('off',bg('guest_dark'),state(room_lamp=False),sound('switch'))
     s.node(None,action('dialogue','[红衣员工看见床边的兔子玩偶，示意我把它交出来。她将玩偶放进工作推车，没有让我们再碰。]',when={'rabbit_owned':True}),fn('dispose_toy'))
     s.prose('＜公共正文：＞','＜进入V13')
     s.end('V13')
-    s = Scene('V13','confession','romance',folder='covers')
-    s.node(None,bg('guest_dark'))
+    s = Scene('V13','guest_dark','romance')
     s.prose(end='[床沿轻轻下陷。')
-    s.hide_portraits = True
-    s.node(None,bg('confession',folder='covers'))
+    s.node(None,cg('confession'))
     s.prose('[床沿轻轻下陷。','＜选择。')
     s.choice('confess','她的手也在抖。',[
         ('我也喜欢你。今天本来就想告诉你。','accept',[state(lin_relation='accepted')]),
@@ -351,7 +362,9 @@ def employee():
     s.node('store',state(blood_stored=True));s.prose('＜完成时：＞','＜未完成时')
     s.node(None,go('E02'));s.node('defer');s.prose('＜未完成时：＞','＜进入E02');s.end('E02')
     s = Scene('E02','rabbit_day','unease')
-    s.prose(end='＜操作窗口')
+    s.prose(end='苏晚晴：别蹲。')
+    s.node(None,cg('blue_rescue'));s.prose('苏晚晴：别蹲。','[他们走开。')
+    s.node(None,bg('rabbit_day'));s.prose('[他们走开。','＜操作窗口')
     s.node(None,sound('laugh'))
     s.choice('handbook_window','笑声并非来自游客。现在可以使用背包里的手册。',[
         ('带着准备好的纸页，去大象园区。','check'),('忽略笑声，继续普通巡查。','ignore')])
@@ -361,9 +374,12 @@ def employee():
     s.node('deliver',bg('elephant_gate'));s.prose('[她沿虚线撕开纸页','＜固定执行')
     s.node(None,state(page_delivered=True),ach('page_delivery','把纸留在草坪','完成员工手册末页的处理。'))
     s.prose('[纸落进草里','＜进入E03');s.end('E03')
-    s = Scene('E03','ape_closed','unease');s.prose();s.end('E04')
+    s = Scene('E03','ape_closed','unease');s.prose(end='[苏晚晴移动栏杆')
+    s.node(None,cg('barrier_closed'));s.prose('[苏晚晴移动栏杆','[何川从另一端')
+    s.node(None,bg('ape_closed'));s.prose('[何川从另一端');s.end('E04')
     s = Scene('E04','elephant_abnormal','danger')
-    s.node(None,sound('breath'));s.prose(end='[杜衡在入口')
+    s.node(None,sound('breath'));s.prose(end='[她立即把视线')
+    s.node(None,cg('elephant_anchor'));s.prose('[她立即把视线','[杜衡在入口')
     s.node(None,bg('elephant_gate'));s.prose('[杜衡在入口','[到安保室附近')
     s.node(None,sound('cry'),bg('security'));s.prose('[到安保室附近','＜进入E05');s.end('E05')
     s = Scene('E05','drink_back','unease');s.prose(end='＜操作窗口')
@@ -378,7 +394,7 @@ def employee():
     s.node('ready');s.prose('＜公共处理：＞','＜选择＞')
     s.choice('lion','第一头白狮跑过来了。',[('泼向第一头跑来的，马上离开近处。','withdraw'),('泼出后留下，盯清多出来的那头。','watch')])
     s.node('watch',go('BE4'))
-    s.node('withdraw',action('item','work_blood',options='remove'),state(blood_carried=False),sound('lion'))
+    s.node('withdraw',action('item','work_blood',options='remove'),state(blood_carried=False),sound('lion'),cg('lion_rescue'))
     s.prose('[液体离开瓶口','[之后由原本')
     s.node(None,bg('lion_public'));s.prose('[之后由原本','＜进入E06');s.end('E06')
     s = Scene('E06','staff_room','unease')
@@ -398,7 +414,7 @@ def employee():
     s.prose('[苏晚晴翻到最后一条','＜选择＞')
     s.choice('red_offer','先看完整本手册，再回答。',[('我不能接，请您另作安排。','refuse',[state(return_variant='refuse')]),('我试着做，请先告诉我负责哪一段。','accept')])
     s.node('refuse',go('NE1'));s.node('accept');s.prose('许岚：左边三间','[进入后完整显示')
-    s.node(None,bg('jelly_night'),book('inner'),state(world='inside'))
+    s.node(None,cg('red_handover'),book('inner'),state(world='inside'))
     s.say('[我扣好红色工作服的袖口。许岚指向工作台上的器械，演示了使用前需要确认的几处位置。]')
     s.prose('许岚：别想着打赢谁','＜进入E09');s.end('E09')
     s = Scene('E09','hall_night','night')
@@ -410,7 +426,7 @@ def employee():
         ('核对三间记录，交回检查表。','verify'),
         ('先搁置检查，休息到 01:15 以后。','neglect',{'when':{'rooms_complete':False}})])
     for index, start, end in ((1,'### 左一','### 左二'),(2,'### 左二','### 左三'),(3,'### 左三','### 检查表')):
-        s.node(f'room{index}',bg('guest_lit'),sound('knock'))
+        s.node(f'room{index}',cg('room_check') if index == 3 else bg('guest_lit'),sound('knock'))
         s.prose(start,end)
         s.node(None,bg('hall_night'),fn('mark_room',room=f'room{index}'),sound('switch'),jump('rooms_menu'))
     s.node('verify',fn('complete_rooms'))
@@ -419,7 +435,8 @@ def employee():
     s.node('late',fn('check',**{'if':{'room1':True,'room2':True,'room3':True},'yes':'rooms_done','no':'lamp_failure','kind':'jump'}))
     s.node('lamp_failure',go('BE5'))
     s.node('rooms_done',ach('three_doors','三扇门都关好了','完成所有客房夜灯检查。'))
-    s.prose('[00:59。','[一声金属撞击');s.node(None,sound('metal'));s.prose('[一声金属撞击','＜进入E10');s.end('E10')
+    s.node(None,cg('overheard_confession'));s.prose('[00:59。','[一声金属撞击')
+    s.node(None,bg('hall_night'),sound('metal'));s.prose('[一声金属撞击','＜进入E10');s.end('E10')
     s = Scene('E10','aquarium_night','danger')
     s.node(None,sound('cry'));s.prose(end='＜选择＞')
     s.choice('intruder','门框又响了一声。',[
@@ -428,13 +445,14 @@ def employee():
         ('独自冲上去，徒手把他拖走。','approach',[state(return_variant='fight')]),
         ('离开岗位，出去看他指的地方。','outside')])
     s.node('approach',go('BE6'));s.node('outside',go('BE7'))
-    s.node('hold',sound('electric'));s.prose('[苏晚晴没有追着手去抓','＜进入E11');s.end('E11')
+    s.node('hold',sound('electric'),cg('entrance_defense'));s.prose('[苏晚晴没有追着手去抓','许岚：有没有碰到你？')
+    s.node(None,bg('aquarium_night'));s.prose('许岚：有没有碰到你？','＜进入E11');s.end('E11')
     s = Scene('E11','food_shelf','night')
     s.prose(end='＜操作：食品')
     s.choice('food_work','食品需要单独收存。',[('放进工作推车，带往指定收纳箱。','food_done',[state(food_cleared=True)])])
     s.node('food_done');s.prose('[她回左二房间','＜操作：周边')
     s.choice('toy_work','床边露出白色玩具的一角。',[('按红衣职责收起兔子周边。','toy_done',[state(toy_removed=True)])])
-    s.node('toy_done',bg('whale_dead'),sound('submerged'))
+    s.node('toy_done',cg('whale_watch'),sound('submerged'))
     s.prose('[背景：鲸鱼区','[食品与玩具放入')
     s.node(None,bg('storage'));s.prose('[食品与玩具放入','＜可选调查')
     s.choice('room_note','旁边的资料板夹着一张旧纸。',[('取下纸张，完整读一遍。','read_note'),('不查看，继续工作。','outage')])
@@ -561,11 +579,8 @@ def items():
         item('guard_note','保安便签记录','抄下墙面便签的内容。完整文字可在守则册查看。','note')]
 
 def main():
-    s=Scene('prologue','opening','day',folder='covers',title='动物园 · 留园须知')
-    s.say('[一个再普通不过的周末。有人约好了见面，有人准备开始值班。]')
-    s.choice('route','选择今天的视角。建议先游玩约会，再来看另一面的夜晚。',[
-        ('今天的约会 · 游客线','visitor'),('今天的值班 · 员工线','employee')])
-    s.node('visitor',go('V01'));s.node('employee',go('E01'));s.end()
+    CHAPTERS.clear()
+    ACHIEVEMENTS.clear()
     visitor();employee();endings()
     # Setup-only nodes execute into their next page, so changing background,
     # granting an item or entering a branch does not require an empty click.
@@ -579,12 +594,29 @@ def main():
     for key,title,desc in [('paper_ready','掌心的一小片','主动处理地图虚线部分。'),('small_care','先歇一下手','使用普通饮用水。'),
                            ('changed_item','包里不是原来的东西','注意到异常物品发生变化。'),('small_patch','新鞋与创可贴','使用普通用品照顾同行的人。')]:
         ach(key,title,desc)
-    payload=dict(StoryName='动物园 · 留园须知',script='logic.py',
-        title=dict(subtitle='今天的约会，和今晚的值班。\n请保管好你的地图。',background='art/covers/opening.png'),
-        chapters=CHAPTERS,items=items(),achievements=ACHIEVEMENTS)
-    path=ROOT/'data/story.json'
-    path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
+    for route, name, prefixes in [('visitor', '今天的约会', ('V', 'TV', 'NV', 'BV', 'BX')),
+                                  ('employee', '今天的值班', ('E', 'TE', 'NE', 'BE'))]:
+        payload=dict(StoryName=name,script='logic.py',
+            title=dict(subtitle='今天的约会，和今晚的值班。\n请保管好你的地图。',background='art/covers/opening.png'),
+            chapters=[c for c in CHAPTERS if c['id'].startswith(prefixes)],
+            items=items(),achievements=ACHIEVEMENTS)
+        (ROOT/f'data/{route}.json').write_text(audit_json(payload)+'\n', encoding='utf-8')
     print(f'{len(CHAPTERS)} chapters / {sum(len(c["contents"]) for c in CHAPTERS)} pages / {len(ACHIEVEMENTS)} achievements / {len(BOOKS)} whole documents')
+
+def audit_json(value, level=0):
+    """Keep each complete action on one line, including its nested arguments."""
+    compact = lambda v: json.dumps(v, ensure_ascii=False, separators=(', ', ': '))
+    if isinstance(value, dict):
+        if 'property' in value or 'function' in value or not value:
+            return compact(value)
+        return '{\n' + ',\n'.join('  '*(level+1) + compact(k) + ': ' + audit_json(v, level+1)
+                                  for k,v in value.items()) + '\n' + '  '*level + '}'
+    if isinstance(value, list):
+        if not value:
+            return '[]'
+        return '[\n' + ',\n'.join('  '*(level+1) + audit_json(v, level+1) for v in value) + '\n' + '  '*level + ']'
+    return compact(value)
+
 
 if __name__=='__main__':
     main()

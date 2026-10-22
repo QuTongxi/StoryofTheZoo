@@ -1,0 +1,7 @@
+{
+  "title": "xx市动物园",
+  "stories": [
+    {"id": "visitor", "name": "游园记", "file": "visitor.json", "description": "前往动物园享受周末时光。", "cover": "art/covers/visitor.png"},
+    {"id": "employee", "name": "值班日志", "file": "employee.json", "description": "打工人，打工魂。", "cover": "art/covers/employee.png", "unlock": {"story": "visitor", "chapter": "V15"}, "locked_popup": {"property": "popup", "value": "请推进游园记以解锁本故事。", "title": "尚未解锁"}}
+  ]
+}

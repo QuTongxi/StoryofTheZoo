@@ -38,8 +38,18 @@ Licensed under Creative Commons: By Attribution 4.0 License.
 - 角色对白没有真人或 AI 配音；低音量的短音作为逐字提示，可在设定中关闭。
 - 测试夹具中的 `bell.wav` 仅用于引擎测试，不是正式故事音效。
 
+## 字体
+
+以下字体以原始文件随游戏保存在 `data/fonts/`，均遵循 SIL Open Font License 1.1；对应的完整版权及许可证文本一并保留。下载版本、来源和 SHA-256 见该目录的 `manifest.json`。
+
+| 用途 | 字体与来源 | 本地授权文件 |
+| --- | --- | --- |
+| 对白、心理描写、弹窗正文 | [霞鹜文楷 Regular — LXGW](https://github.com/lxgw/LxgwWenKai)，基于 Fontworks Klee One | `LXGWWenKai-OFL.txt` |
+| 菜单、角色姓名、界面信息 | [未来荧黑 SC Normal Regular — Celestial Phineas](https://github.com/welai/glow-sans) | `GlowSans-OFL.txt` |
+| 游戏标题、章节与结局标题 | [思源宋体 SC Medium — Adobe](https://github.com/adobe-fonts/source-han-serif) | `SourceHanSerif-LICENSE.txt` |
+
 ## 软件与使用范围
 
-运行依赖 pygame-ce；第三方软件遵循自身授权。中文字体优先使用运行系统已安装字体，项目未打包第三方商业字体。
+运行依赖 pygame-ce；第三方软件遵循自身授权。
 
 本作定位为非商业同人项目，请勿商用。原作、参考视频、音乐、音效及软件的权利与授权各自独立；本说明不将第三方作品改为项目独占，也不限制 CC BY / CC0 素材原有的合法使用权。
